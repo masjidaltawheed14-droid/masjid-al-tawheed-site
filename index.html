@@ -4,16 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Masjid Al-Tawheed</title>
-  <link rel="icon" type="image/png" href="Masjid_Al_Tawheed_Logo_Transparent.png" />
+
+  <!-- Favicon for browser tab -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_32x32.png" />
+  <link rel="shortcut icon" href="./favicon_32x32.png" />
+
   <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f5f5f5; padding-top:60px;}
-    header {position:fixed; top:0; left:0; right:0; background:#222; color:#fff; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 5px rgba(0,0,0,.3); z-index:1000;}
-    .nav-links a {color:#fff; margin-left:20px; text-decoration:none; font-weight:bold;}
-    .nav-links a:hover {text-decoration:underline;}
-    .seal {position:fixed; top:10px; right:10px; height:40px;}
-    main {max-width:900px; margin:80px auto; padding:30px; background:#fff; box-shadow:0 0 10px rgba(0,0,0,.1); border-radius:8px;}
-    h1 {text-align:center; color:#333;}
-    p {line-height:1.6; color:#444;}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding-top: 60px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #222;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .seal {
+      position: fixed;
+      top: 60px; /* moved down so it doesn’t overlap nav */
+      right: 10px;
+      height: 50px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .protections {
+      margin-top: 30px;
+      padding: 15px;
+      background: #eef7f0;
+      border-left: 5px solid #2c6e49;
+    }
   </style>
 </head>
 <body>
@@ -21,15 +76,36 @@
     <div><strong>Masjid Al-Tawheed</strong></div>
     <nav class="nav-links">
       <a href="index.html">Home</a>
-      <a href="commitment.html">Our Commitment</a>
+      <a href="our-commitment.html">Our Commitment</a>
+      <a href="trust-framework.html">Trust Framework</a>
+      <a href="public-notices.html">Public Notices</a>
+      <a href="ministry-works.html">Ministry Works</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <img src="Masjid_Al_Tawheed_Logo_Transparent.png" alt="Seal" class="seal" />
   </header>
+
+  <!-- Seal inside the site -->
+  <img src="Masjid_Al_Tawheed_Logo_Transparent.png" alt="Seal" class="seal" />
+
   <main>
     <h1>Welcome to Masjid Al-Tawheed</h1>
-    <p>Masjid Al-Tawheed operates under the spiritual jurisdiction of the Most High, fulfilling sacred fiduciary duties through its Ecclesiastical Treasury Framework (ETF).</p>
-    <p>Our ministry stands on the principles of faith, stewardship, and service. Explore our commitment to integrity, transparency, and legacy building through the links above.</p>
+    <p>
+      This ministry operates under the spiritual jurisdiction of the Most High, fulfilling sacred fiduciary duties through its Ecclesiastical Treasury Framework (ETF).
+    </p>
+    <p>
+      Browse the sections above to learn more about our trusts, ministry services, and legacy building through divine stewardship.
+    </p>
+
+    <div class="protections">
+      <h2>📜 First Amendment & 508(c)(1)(A) Protections</h2>
+      <p>
+        Masjid Al-Tawheed stands under the protections of the First Amendment to the U.S. Constitution:
+        <em>“Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof.”</em>
+      </p>
+      <p>
+        As a 508(c)(1)(A) faith-based ministry, we are recognized as a non-taxable, religious, and ecclesiastical entity — free from filing requirements imposed on secular corporations, while fully authorized to carry out our sacred mission.
+      </p>
+    </div>
   </main>
 </body>
 </html>
