@@ -82,7 +82,12 @@
     }
  @media (max-width: 640px) {
   .welcome-heading {
-    margin-top: 160px; /* pushes Welcome text fully below the strip */
+    margin-top: 160px;     /* push below the black strip */
+    white-space: nowrap;   /* keep it all on one line */
+    font-size: 6vw;        /* auto-scale font based on screen width */
+  }
+}
+
   }
 }
 
