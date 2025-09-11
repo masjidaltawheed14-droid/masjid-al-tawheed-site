@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Masjid Al-Tawheed</title>
 
-  <!-- Favicon for browser tab -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon_32x32.png" />
   <link rel="shortcut icon" href="./favicon_32x32.png" />
 
@@ -26,7 +26,7 @@
       color: #fff;
       padding: 15px 20px;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end; /* nav flush to the right */
       align-items: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
       z-index: 1000;
@@ -45,9 +45,10 @@
 
     .seal {
       position: fixed;
-      top: 60px; /* moved down so it doesn’t overlap nav */
+      top: 80px; /* moved further down */
       right: 10px;
-      height: 50px;
+      height: 55px;
+      z-index: 900;
     }
 
     main {
@@ -73,7 +74,6 @@
 </head>
 <body>
   <header>
-    <div><strong>Masjid Al-Tawheed</strong></div>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="our-commitment.html">Our Commitment</a>
@@ -84,7 +84,7 @@
     </nav>
   </header>
 
-  <!-- Seal inside the site -->
+  <!-- Seal -->
   <img src="Masjid_Al_Tawheed_Logo_Transparent.png" alt="Seal" class="seal" />
 
   <main>
