@@ -8,7 +8,47 @@
   <style>
     :root { --ink:#111; --muted:#666; --line:#e6e6e6; --bg:#fafafa; }
     html,body{margin:0;padding:0;background:#fff;color:var(--ink);font:16px/1.6 Arial, sans-serif}
-    .header{position:sticky;top:0;background:#222;color:#fff;padding:14px 20px;z-index:1000}
+
+    /* Black strip header */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background-color: #222;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    /* Nav links */
+    .nav-links {
+      display: flex;
+      justify-content: center;  /* center the tabs */
+      gap: 20px;                /* space between them */
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 6px 10px;
+    }
+
+    /* Active + hover state */
+    .nav-links a.active {
+      font-weight: bold;
+      color: #1e3a8a;              /* deep blue text */
+      border-bottom: 2px solid #daa520; /* gold underline */
+    }
+
+    .nav-links a:hover {
+      color: #1e3a8a;
+      border-bottom: 2px solid #daa520;
+    }
+
     .wrap{max-width:860px;margin:24px auto;padding:0 20px}
     h1{font-size:28px;margin:0 0 12px}
     .intro{color:var(--muted);margin:0 0 28px}
@@ -20,22 +60,10 @@
     @media (max-width:640px){
       h1{font-size:6vw}
     }
-  /* Navigation active + hover states */
-.nav-links a.active {
-  font-weight: bold;
-  color: #1e3a8a;              /* deep blue text */
-  border-bottom: 2px solid #daa520; /* gold underline */
-}
-
-.nav-links a:hover {
-  color: #1e3a8a;              /* deep blue */
-  border-bottom: 2px solid #daa520; /* gold underline */
-}
-
-</style>
+  </style>
 </head>
 <body>
-  <header>
+  <header class="header">
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="our-commitment.html">Our Commitment</a>
