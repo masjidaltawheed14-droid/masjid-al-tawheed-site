@@ -3,71 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Masjid Al-Tawheed — Home</title>
+  <title>Masjid Al-Tawheed</title>
   <link rel="icon" type="image/png" href="favicon_32x32.png">
-  <style>
-    :root { --ink:#111; --muted:#666; --line:#e6e6e6; --bg:#fafafa; }
-    html,body{margin:0;padding:0;background:#fff;color:var(--ink);font:16px/1.6 Arial, sans-serif}
-
-    /* Header black strip */
-    .header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background-color: #222;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      z-index: 1000;
-      flex-wrap: wrap;
-    }
-
-    /* Push content down so it's not hidden under header */
-    body {
-      padding-top: 70px;
-    }
-
-    @media (max-width: 640px) {
-      body {
-        padding-top: 120px; /* extra space when nav wraps */
-      }
-    }
-
-    /* Nav links */
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      padding: 6px 10px;
-    }
-
-    /* Active + hover */
-    .nav-links a.active {
-      font-weight: bold;
-      color: #1e3a8a;              /* deep blue */
-      border-bottom: 2px solid #daa520; /* gold underline */
-    }
-
-    .nav-links a:hover {
-      color: #1e3a8a;
-      border-bottom: 2px solid #daa520;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header Navigation -->
   <header class="header">
     <nav class="nav-links">
       <a href="index.html" class="active">Home</a>
       <a href="our-commitment.html">Our Commitment</a>
-      <a href="#">Trust Framework</a>
+      <a href="trust-framework.html">Trust Framework</a>
       <a href="public-notices.html">Public Notices</a>
-      <a href="#">Ministry Works</a>
+      <a href="ministry-works.html">Ministry Works</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
+  <!-- Main Content -->
+  <main class="wrap">
+    <!-- Logo -->
+    <div style="text-align:center; margin-bottom:20px;">
+      <img src="seal.png" alt="Masjid Al-Tawheed Seal" style="max-width:180px; height:auto;">
+    </div>
+
+    <!-- Welcome Heading -->
+    <h1 class="welcome-heading">Welcome to Masjid Al-Tawheed</h1>
+
+    <!-- Intro Text -->
+    <p>
+      Operating under the spiritual jurisdiction of the Most High, Masjid Al-Tawheed fulfills sacred fiduciary duties through its Ecclesiastical Treasury Framework (ETF), building a legacy of faith, credit, and stewardship.
+    </p>
+
+    <!-- Section Example -->
+    <section style="background:#f0f8ff; border-left:5px solid #1e3a8a; padding:15px; border-radius:6px; margin-top:20px;">
+      <h2>First Amendment & 508(c)(1)(A) Protections</h2>
+      <p>
+        Masjid Al-Tawheed stands under the protections of the First Amendment to the U.S. Constitution: 
+        <em>“Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof.”</em>
+      </p>
+      <p>
+        As such, churches, ministries, and their integrated auxiliaries are <strong>automatically tax-exempt</strong> and are not required to apply for recognition.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
