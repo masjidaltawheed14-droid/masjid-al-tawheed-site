@@ -23,41 +23,40 @@
       flex-wrap: wrap;
     }
 
-    /* Push content down so it's not hidden under header */
-    body {
-      padding-top: 70px;
-    }
-
-    @media (max-width: 640px) {
-      body {
-        padding-top: 120px; /* extra space when nav wraps */
-      }
-    }
+    /* Push content below header */
+    body { padding-top: 70px; }
+    @media (max-width: 640px) { body { padding-top: 120px; } }
 
     /* Nav links */
     .nav-links {
       display: flex;
       justify-content: center;
       gap: 20px;
+      flex-wrap: wrap;
     }
-
     .nav-links a {
       color: #fff;
       text-decoration: none;
       padding: 6px 10px;
+      white-space: nowrap;
     }
-
-    /* Active + hover */
     .nav-links a.active {
       font-weight: bold;
-      color: #1e3a8a;              /* deep blue */
-      border-bottom: 2px solid #daa520; /* gold underline */
+      color: #1e3a8a;
+      border-bottom: 2px solid #daa520;
     }
-
     .nav-links a:hover {
       color: #1e3a8a;
       border-bottom: 2px solid #daa520;
     }
+
+    /* Content wrapper */
+    .wrap{max-width:860px;margin:24px auto;padding:0 20px}
+
+    /* Page styles */
+    h1{text-align:center;font-size:28px;margin:0 0 12px}
+    .subtitle{text-align:center;font-style:italic;margin-bottom:20px}
+    h2{margin-top:28px}
   </style>
 </head>
 <body>
@@ -65,25 +64,27 @@
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="our-commitment.html" class="active">Our Commitment</a>
-      <a href="#">Trust Framework</a>
+      <a href="trust-framework.html">Trust Framework</a>
       <a href="public-notices.html">Public Notices</a>
-      <a href="#">Ministry Works</a>
+      <a href="ministry-works.html">Ministry Works</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
+  <main class="wrap">
     <h1>Our Commitment</h1>
+    <p class="subtitle">
+      Masjid Al-Tawheed<br>
+      (A Ministry Established in Faith, Governed by Principle)
+    </p>
+
     <h2>Ministry Stewardship Pledge</h2>
-
-    <p><strong>Masjid Al-Tawheed<br>(A Ministry Established in Faith, Governed by Principle)</strong></p>
-    <hr>
-
     <h3>Preamble</h3>
     <p>
-      We, the stewards, trustees, and faithful workers of Masjid Al-Tawheed, do solemnly affirm our commitment
-      to operate this ministry in righteousness, transparency, and service — never for personal gain or worldly
-      fame, but in full submission to the calling entrusted to us.
+      We, the stewards, trustees, and faithful workers of Masjid Al-Tawheed,
+      do solemnly affirm our commitment to operate this ministry in
+      righteousness, transparency, and service — never for personal gain
+      or worldly fame, but in full submission to the calling entrusted to us.
     </p>
 
     <h3>1. Purpose Over Profit</h3>
@@ -111,40 +112,7 @@
     <ul>
       <li>Keep humility and servant-leadership at the center of governance.</li>
       <li>Avoid titles, appearances, or messaging that glorify individuals above the message.</li>
-      <li>Resist the temptation to elevate ourselves through ministry influence, instead lifting the burdened and the seeking.</li>
     </ul>
-
-    <h3>5. Legacy Over Luxury</h3>
-    <ul>
-      <li>Build legacy systems, not luxury structures — sustaining faith, family, and spiritual continuity.</li>
-      <li>Train and raise up future stewards who inherit responsibility, not riches.</li>
-      <li>Leave behind a spiritual footprint marked by transformation, not transaction.</li>
-    </ul>
-
-    <h3>6. Separation from Corruption</h3>
-    <ul>
-      <li>Avoid pitfalls of televangelism, prosperity gospel manipulation, and coercive donation practices.</li>
-      <li>Never exchange promises of divine favor for financial contributions.</li>
-      <li>Remain separate from state or secular systems that dilute First Amendment protection of ministry governance.</li>
-    </ul>
-
-    <h3>7. Alignment with the Original Mandate</h3>
-    <ul>
-      <li>Return often to prayer, fasting, and spiritual counsel before expanding the ministry’s scope.</li>
-      <li>Operate from divine instruction, not worldly ambition.</li>
-      <li>Pivot if we drift, pause if we lose focus, and surrender if we take credit for what belongs to the Most High.</li>
-    </ul>
-
-    <hr>
-    <h3>✍🏽 Affirmation of This Pledge</h3>
-    <p>
-      This pledge serves as a living principle, integrated into our trust documents, ministry records,
-      and leadership decisions. Let all actions, filings, and declarations reflect this spiritual vow.
-    </p>
   </main>
-
-  <footer>
-    © 2025 Masjid Al-Tawheed. All Rights Reserved.
-  </footer>
 </body>
 </html>

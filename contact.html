@@ -9,55 +9,18 @@
     :root { --ink:#111; --muted:#666; --line:#e6e6e6; --bg:#fafafa; }
     html,body{margin:0;padding:0;background:#fff;color:var(--ink);font:16px/1.6 Arial, sans-serif}
 
-    /* Header black strip */
-    .header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background-color: #222;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      z-index: 1000;
-      flex-wrap: wrap;
-    }
+    .header {position:fixed;top:0;left:0;right:0;background:#222;padding:15px 20px;display:flex;justify-content:center;align-items:center;box-shadow:0 2px 5px rgba(0,0,0,0.3);z-index:1000;flex-wrap:wrap;}
 
-    /* Push content down so it's not hidden under header */
-    body {
-      padding-top: 70px;
-    }
+    body {padding-top:70px;}
+    @media(max-width:640px){body{padding-top:120px;}}
 
-    @media (max-width: 640px) {
-      body {
-        padding-top: 120px; /* extra space when nav wraps */
-      }
-    }
+    .nav-links {display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
+    .nav-links a {color:#fff;text-decoration:none;padding:6px 10px;white-space:nowrap;}
+    .nav-links a.active {font-weight:bold;color:#1e3a8a;border-bottom:2px solid #daa520;}
+    .nav-links a:hover {color:#1e3a8a;border-bottom:2px solid #daa520;}
 
-    /* Nav links */
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      padding: 6px 10px;
-    }
-
-    /* Active + hover */
-    .nav-links a.active {
-      font-weight: bold;
-      color: #1e3a8a;              /* deep blue */
-      border-bottom: 2px solid #daa520; /* gold underline */
-    }
-
-    .nav-links a:hover {
-      color: #1e3a8a;
-      border-bottom: 2px solid #daa520;
-    }
+    .wrap{max-width:860px;margin:24px auto;padding:0 20px}
+    h1{text-align:center;font-size:28px;margin:0 0 12px}
   </style>
 </head>
 <body>
@@ -65,22 +28,23 @@
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="our-commitment.html">Our Commitment</a>
-      <a href="#">Trust Framework</a>
+      <a href="trust-framework.html">Trust Framework</a>
       <a href="public-notices.html">Public Notices</a>
-      <a href="#">Ministry Works</a>
+      <a href="ministry-works.html">Ministry Works</a>
       <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
 
-  <main>
+  <main class="wrap">
     <h1>Contact Us</h1>
     <p><strong>Mailing Address:</strong></p>
-    <p>Masjid Al-Tawheed<br>PO Box 71<br>Davis Station, SC 29041</p>
+    <p>
+      Masjid Al-Tawheed<br>
+      PO Box 71<br>
+      Davis Station, SC 29041
+    </p>
     <p><strong>Email:</strong> masjidaltawheed14@gmail.com</p>
+    <p>© 2025 Masjid Al-Tawheed. All Rights Reserved.</p>
   </main>
-
-  <footer>
-    © 2025 Masjid Al-Tawheed. All Rights Reserved.
-  </footer>
 </body>
 </html>
