@@ -23,36 +23,44 @@
       flex-wrap: wrap;
     }
 
-    /* Push content down */
-    body { padding-top: 70px; }
-    @media (max-width: 640px) { body { padding-top: 120px; } }
+    /* Push content down so it's not hidden under header */
+    body {
+      padding-top: 70px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding-top: 120px; /* extra space when nav wraps */
+      }
+    }
 
     /* Nav links */
     .nav-links {
       display: flex;
       justify-content: center;
       gap: 20px;
-      flex-wrap: wrap;
     }
+
     .nav-links a {
       color: #fff;
       text-decoration: none;
       padding: 6px 10px;
-      white-space: nowrap;
     }
+
+    /* Active + hover */
     .nav-links a.active {
       font-weight: bold;
-      color: #1e3a8a;
-      border-bottom: 2px solid #daa520;
+      color: #1e3a8a;              /* deep blue */
+      border-bottom: 2px solid #daa520; /* gold underline */
     }
+
     .nav-links a:hover {
       color: #1e3a8a;
       border-bottom: 2px solid #daa520;
     }
 
-    /* Wrapper for content */
+    /* Notices */
     .wrap{max-width:860px;margin:24px auto;padding:0 20px}
-
     h1{font-size:28px;margin:0 0 12px}
     .intro{color:var(--muted);margin:0 0 28px}
     .notice{border:1px solid var(--line);background:var(--bg);padding:18px 16px;border-radius:8px;margin-bottom:16px}
@@ -60,6 +68,9 @@
     .meta{font-size:14px;color:var(--muted);margin-bottom:10px}
     .notice ul{margin:8px 0 0 20px}
     .footer-note{font-size:13px;color:var(--muted);margin-top:22px}
+    @media (max-width:640px){
+      h1{font-size:6vw}
+    }
   </style>
 </head>
 <body>
@@ -161,3 +172,5 @@
   </main>
 </body>
 </html>
+
+
