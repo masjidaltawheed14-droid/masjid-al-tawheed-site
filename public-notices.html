@@ -9,12 +9,11 @@
     :root { --ink:#111; --muted:#666; --line:#e6e6e6; --bg:#fafafa; }
     html,body{margin:0;padding:0;background:#fff;color:var(--ink);font:16px/1.6 Arial, sans-serif}
 
-    /* Black strip header */
+    /* Header black strip */
     .header {
       position: fixed;
       top: 0; left: 0; right: 0;
       background-color: #222;
-      color: #fff;
       padding: 15px 20px;
       display: flex;
       justify-content: center;
@@ -24,11 +23,22 @@
       flex-wrap: wrap;
     }
 
+    /* Push content down so it's not hidden under header */
+    body {
+      padding-top: 70px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding-top: 120px; /* extra space when nav wraps */
+      }
+    }
+
     /* Nav links */
     .nav-links {
       display: flex;
-      justify-content: center;  /* center the tabs */
-      gap: 20px;                /* space between them */
+      justify-content: center;
+      gap: 20px;
     }
 
     .nav-links a {
@@ -37,10 +47,10 @@
       padding: 6px 10px;
     }
 
-    /* Active + hover state */
+    /* Active + hover */
     .nav-links a.active {
       font-weight: bold;
-      color: #1e3a8a;              /* deep blue text */
+      color: #1e3a8a;              /* deep blue */
       border-bottom: 2px solid #daa520; /* gold underline */
     }
 
@@ -49,6 +59,7 @@
       border-bottom: 2px solid #daa520;
     }
 
+    /* Notices */
     .wrap{max-width:860px;margin:24px auto;padding:0 20px}
     h1{font-size:28px;margin:0 0 12px}
     .intro{color:var(--muted);margin:0 0 28px}
@@ -67,9 +78,9 @@
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="our-commitment.html">Our Commitment</a>
-      <a href="#">Trust Framework</a>
+      <a href="trust-framework.html">Trust Framework</a>
       <a href="public-notices.html" class="active">Public Notices</a>
-      <a href="#">Ministry Works</a>
+      <a href="ministry-works.html">Ministry Works</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
