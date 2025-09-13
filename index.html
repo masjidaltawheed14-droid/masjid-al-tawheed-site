@@ -4,7 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Masjid Al-Tawheed</title>
+  <link rel="icon" type="image/png" href="favicon_32x32.png">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Reset */
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #111;
+      font: 16px/1.6 Arial, sans-serif;
+    }
+
+    /* Header black strip */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background-color: #222;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    /* Push content down */
+    body { padding-top: 80px; }
+
+    /* Nav links */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 6px 10px;
+      white-space: nowrap;
+    }
+    .nav-links a.active {
+      font-weight: bold;
+      color: #1e3a8a;              /* deep blue */
+      border-bottom: 2px solid #daa520; /* gold underline */
+    }
+    .nav-links a:hover {
+      color: #1e3a8a;
+      border-bottom: 2px solid #daa520;
+    }
+
+    /* Logo styling */
+    .logo {
+      text-align: center;
+      margin: 30px 0 20px 0;
+    }
+
+    .logo img {
+      max-width: 220px;   /* keeps it smaller on mobile */
+      height: auto;
+      display: block;
+      margin: 0 auto 12px auto;
+    }
+
+    .logo-text {
+      font-size: 22px;
+      font-weight: bold;
+      color: #222;
+      margin-top: 5px;
+    }
+
+    /* Main wrapper */
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    h1 { font-size: 28px; margin: 0 0 12px; }
+    h2 { font-size: 22px; margin-top: 28px; }
+    p { margin-bottom: 18px; }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 6vw; }
+      .logo img { max-width: 180px; }
+      .logo-text { font-size: 20px; }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      background-color: #222;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -19,7 +116,7 @@
   </header>
 
   <main class="wrap">
-    <!-- Logo and Title -->
+    <!-- Logo + Title -->
     <div class="logo">
       <img src="Masjid_Al_Tawheed_Logo_Transparent.png" alt="Masjid Al-Tawheed Logo">
       <div class="logo-text">Masjid Al-Tawheed</div>
@@ -27,25 +124,23 @@
 
     <h1>Welcome to Masjid Al-Tawheed</h1>
     <p>
-      Operating under the spiritual jurisdiction of the Most High, Masjid Al-Tawheed fulfills sacred fiduciary duties through its 
-      Ecclesiastical Treasury Framework (ETF), building a legacy of faith, credit, and stewardship.
+      Operating under the spiritual jurisdiction of the Most High, Masjid Al-Tawheed fulfills sacred fiduciary duties 
+      through its Ecclesiastical Treasury Framework (ETF), building a legacy of faith, credit, and stewardship.
     </p>
 
-    <section class="notice">
-      <h2>First Amendment & 508(c)(1)(A) Protections</h2>
-      <p>
-        Masjid Al-Tawheed stands under the protections of the First Amendment to the U.S. Constitution: 
-        <em>“Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof.”</em>
-      </p>
-      <p>
-        Churches, ministries, and their integrated auxiliaries are <strong>automatically tax-exempt</strong> 
-        and are not required to apply for recognition.
-      </p>
-    </section>
+    <h2>First Amendment & 508(c)(1)(A) Protections</h2>
+    <p>
+      Masjid Al-Tawheed stands under the protections of the First Amendment to the U.S. Constitution: 
+      <em>“Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof.”</em>
+    </p>
+    <p>
+      Churches, ministries, and their integrated auxiliaries are automatically tax-exempt and are not required 
+      to apply for recognition.
+    </p>
   </main>
 
   <footer>
-    <p>© 2025 Masjid Al-Tawheed. All Rights Reserved.</p>
+    © 2025 Masjid Al-Tawheed. All Rights Reserved.
   </footer>
 </body>
 </html>
