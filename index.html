@@ -7,7 +7,6 @@
   <link rel="icon" type="image/png" href="favicon_32x32.png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* General Reset */
     html, body {
       margin: 0;
       padding: 0;
@@ -30,10 +29,8 @@
       flex-wrap: wrap;
     }
 
-    /* Push content down */
     body { padding-top: 80px; }
 
-    /* Nav links */
     .nav-links {
       display: flex;
       justify-content: center;
@@ -48,8 +45,8 @@
     }
     .nav-links a.active {
       font-weight: bold;
-      color: #1e3a8a;              /* deep blue */
-      border-bottom: 2px solid #daa520; /* gold underline */
+      color: #1e3a8a;
+      border-bottom: 2px solid #daa520;
     }
     .nav-links a:hover {
       color: #1e3a8a;
@@ -63,20 +60,12 @@
     }
 
     .logo img {
-      max-width: 220px;   /* keeps it smaller on mobile */
+      max-width: 220px;
       height: auto;
       display: block;
-      margin: 0 auto 12px auto;
+      margin: 0 auto;
     }
 
-    .logo-text {
-      font-size: 22px;
-      font-weight: bold;
-      color: #222;
-      margin-top: 5px;
-    }
-
-    /* Main wrapper */
     .wrap {
       max-width: 860px;
       margin: 0 auto;
@@ -90,10 +79,8 @@
     @media (max-width: 640px) {
       h1 { font-size: 6vw; }
       .logo img { max-width: 180px; }
-      .logo-text { font-size: 20px; }
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 15px;
@@ -116,10 +103,9 @@
   </header>
 
   <main class="wrap">
-    <!-- Logo + Title -->
+    <!-- Logo -->
     <div class="logo">
       <img src="Masjid_Al_Tawheed_Logo_Transparent.png" alt="Masjid Al-Tawheed Logo">
-      <div class="logo-text">Masjid Al-Tawheed</div>
     </div>
 
     <h1>Welcome to Masjid Al-Tawheed</h1>
@@ -134,7 +120,7 @@
       <em>“Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof.”</em>
     </p>
     <p>
-      Churches, ministries, and their integrated auxiliaries are automatically tax-exempt and are not required 
+      Churches, ministries, and their integrated auxiliaries are <strong>automatically tax-exempt</strong> and are not required 
       to apply for recognition.
     </p>
   </main>
