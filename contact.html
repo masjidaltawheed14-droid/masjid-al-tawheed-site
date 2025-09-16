@@ -7,13 +7,44 @@
   <link rel="icon" type="image/png" href="favicon_32x32.png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Extra fix to prevent overlap with black header */
-    body { padding-top: 80px; }
-    @media (max-width: 640px) {
-      body { padding-top: 160px; }
+    /* Page-specific fix so heading isn't cut off */
+    body { padding-top: 100px; }
+
+    main.wrap {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
     }
-    h1 { text-align:center; }
-    .contact-info { text-align:center; margin-top:20px; }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    p.intro {
+      color: #444;
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+
+    .contact-info {
+      margin-bottom: 30px;
+    }
+
+    .contact-info strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-top: 40px;
+      padding: 20px 0;
+      background: none;
+    }
   </style>
 </head>
 <body>
@@ -32,19 +63,20 @@
   <!-- Main Content -->
   <main class="wrap">
     <h1>Contact Us</h1>
-    <p class="intro" style="text-align:center;">
+    <p class="intro">
       We welcome inquiries, correspondence, and fellowship.  
       Please use the following information to reach Masjid Al-Tawheed:
     </p>
 
     <div class="contact-info">
-      <p><strong>Mailing Address:</strong><br>
-        PO Box 71<br>
-        Davis Station, SC 29041
-      </p>
-      <p><strong>Email:</strong><br>
-        <a href="mailto:masjidaltawheed14@gmail.com">masjidaltawheed14@gmail.com</a>
-      </p>
+      <strong>Mailing Address:</strong>
+      PO Box 71<br>
+      Davis Station, SC 29041
+    </div>
+
+    <div class="contact-info">
+      <strong>Email:</strong>
+      <a href="mailto:masjidaltawheed14@gmail.com">masjidaltawheed14@gmail.com</a>
     </div>
   </main>
 
