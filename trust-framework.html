@@ -7,16 +7,24 @@
   <link rel="icon" type="image/png" href="favicon_32x32.png">
   <link rel="stylesheet" href="style.css">
   <style>
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
     main.wrap {
-      padding-top: 120px; /* push content lower for mobile + desktop */
-      padding-bottom: 60px; /* so footer isn’t floating high */
+      flex: 1;
+      padding-top: 120px; /* keeps heading clear of black strip */
       max-width: 900px;
       margin: 0 auto;
     }
+
     footer {
-      margin-top: 40px;
-      text-align: left; /* consistent with all pages */
-      padding-left: 15px;
+      margin-top: auto;
+      text-align: left;
+      padding: 20px 15px;
     }
   </style>
 </head>
@@ -37,8 +45,7 @@
   <main class="wrap">
     <h1>Trust Framework</h1>
     <p>
-      The Trust Framework of Masjid Al-Tawheed is the foundation of our ministry governance,
-      rooted in First Amendment protections and 508(c)(1)(A) authority.
+      The Trust Framework of Masjid Al-Tawheed is the foundation of our ministry governance, rooted in First Amendment protections and 508(c)(1)(A) authority.
     </p>
 
     <h2>Foundational Trusts</h2>

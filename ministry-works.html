@@ -7,21 +7,24 @@
   <link rel="icon" type="image/png" href="favicon_32x32.png">
   <link rel="stylesheet" href="style.css">
   <style>
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
     main.wrap {
-      padding-top: 120px; /* push content lower for mobile + desktop */
-      padding-bottom: 60px;
+      flex: 1;
+      padding-top: 120px; /* keeps heading clear of black strip */
       max-width: 900px;
       margin: 0 auto;
     }
+
     footer {
-      margin-top: 40px;
-      text-align: left; /* consistent across site */
-      padding-left: 15px;
-    }
-    .trademark {
-      font-size: 0.9em;
-      margin-top: 25px;
-      color: #555;
+      margin-top: auto;
+      text-align: left;
+      padding: 20px 15px;
     }
   </style>
 </head>
@@ -51,13 +54,8 @@
       <li><strong>Ecclesiastical Trust Stewardship:</strong> Oversight of treasury, property, education, wellness, and creative trusts under Masjid Al-Tawheed.</li>
       <li><strong>Education &amp; Scholarship:</strong> Homeschooling initiatives, youth education, and future scholarship programs for community development.</li>
       <li><strong>Wellness &amp; Relief:</strong> Holistic health programs, benevolence outreach, and compassion-driven initiatives.</li>
-      <li><strong>Creative Works:</strong> From publications to branded outreach like Apprecilove™,
-          our ministry extends into the creative sphere to uplift and inspire.</li>
+      <li><strong>Creative Works:</strong> From publications to branded outreach like Apprecilove™ , our ministry extends into the creative sphere to uplift and inspire.</li>
     </ul>
-
-    <p class="trademark">
-      Apprecilove™ is a coined term uniquely identified with Masjid Al-Tawheed and is used in ministry-affiliated works.
-    </p>
   </main>
 
   <!-- Footer -->
