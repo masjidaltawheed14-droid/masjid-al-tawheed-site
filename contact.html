@@ -3,54 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us — Masjid Al-Tawheed</title>
+  <title>Contact — Masjid Al-Tawheed</title>
   <link rel="icon" type="image/png" href="favicon_32x32.png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Push content down so headings are never hidden */
-    body { padding-top: 160px; }
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
 
     main.wrap {
-      max-width: 700px;
+      flex: 1;
+      padding-top: 120px; /* keeps heading clear of black strip */
+      max-width: 900px;
       margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-
-    /* Extra space on small screens so headings never touch nav */
-    @media (max-width: 768px) {
-      h1 {
-        margin-top: 30px;
-      }
-    }
-
-    p.intro {
-      color: #444;
-      margin-bottom: 25px;
-      font-size: 16px;
-    }
-
-    .contact-info {
-      margin-bottom: 30px;
-    }
-
-    .contact-info strong {
-      display: block;
-      margin-bottom: 6px;
     }
 
     footer {
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-      margin-top: 40px;
-      padding: 20px 0;
-      background: none;
+      margin-top: auto;
+      text-align: left;
+      padding: 20px 15px;
     }
   </style>
 </head>
@@ -70,21 +44,19 @@
   <!-- Main Content -->
   <main class="wrap">
     <h1>Contact Us</h1>
-    <p class="intro">
-      We welcome inquiries, correspondence, and fellowship.  
-      Please use the following information to reach Masjid Al-Tawheed:
+    <p>
+      We welcome inquiries, correspondence, and fellowship. Please use the following information 
+      to reach Masjid Al-Tawheed:
     </p>
 
-    <div class="contact-info">
-      <strong>Mailing Address:</strong>
+    <p><strong>Mailing Address:</strong><br>
       PO Box 71<br>
       Davis Station, SC 29041
-    </div>
+    </p>
 
-    <div class="contact-info">
-      <strong>Email:</strong>
+    <p><strong>Email:</strong><br>
       <a href="mailto:masjidaltawheed14@gmail.com">masjidaltawheed14@gmail.com</a>
-    </div>
+    </p>
   </main>
 
   <!-- Footer -->
