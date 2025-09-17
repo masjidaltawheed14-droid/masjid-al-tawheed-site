@@ -7,28 +7,21 @@
   <link rel="icon" type="image/png" href="favicon_32x32.png">
   <link rel="stylesheet" href="style.css">
   <style>
-    main {
-      padding-top: 180px; /* matches Contact Us page feel */
-      padding-bottom: 40px;
-    }
-    @media (max-width: 768px) {
-      main {
-        padding-top: 140px;
-      }
-    }
-    html, body {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-    }
-    main {
-      flex: 1;
+    main.wrap {
+      padding-top: 120px; /* push content lower for mobile + desktop */
+      padding-bottom: 60px;
+      max-width: 900px;
+      margin: 0 auto;
     }
     footer {
-      text-align: left;
-      padding: 15px;
-      margin-top: auto;
+      margin-top: 40px;
+      text-align: left; /* consistent across site */
+      padding-left: 15px;
+    }
+    .trademark {
+      font-size: 0.9em;
+      margin-top: 25px;
+      color: #555;
     }
   </style>
 </head>
@@ -56,11 +49,15 @@
     <ul>
       <li><strong>Faith-Based Outreach:</strong> Programs, teachings, and initiatives that nurture faith and strengthen families.</li>
       <li><strong>Ecclesiastical Trust Stewardship:</strong> Oversight of treasury, property, education, wellness, and creative trusts under Masjid Al-Tawheed.</li>
-      <li><strong>Education & Scholarship:</strong> Homeschooling initiatives, youth education, and future scholarship programs for community development.</li>
-      <li><strong>Wellness & Relief:</strong> Holistic health programs, benevolence outreach, and compassion-driven initiatives.</li>
+      <li><strong>Education &amp; Scholarship:</strong> Homeschooling initiatives, youth education, and future scholarship programs for community development.</li>
+      <li><strong>Wellness &amp; Relief:</strong> Holistic health programs, benevolence outreach, and compassion-driven initiatives.</li>
       <li><strong>Creative Works:</strong> From publications to branded outreach like Apprecilove™,
           our ministry extends into the creative sphere to uplift and inspire.</li>
     </ul>
+
+    <p class="trademark">
+      Apprecilove™ is a coined term uniquely identified with Masjid Al-Tawheed and is used in ministry-affiliated works.
+    </p>
   </main>
 
   <!-- Footer -->
