@@ -7,16 +7,16 @@
   <link rel="icon" type="image/png" href="favicon_32x32.png">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Extra padding for top consistency */
-    main.wrap {
-      padding-top: 60px; /* adjust spacing under black strip */
-    }
-    footer {
-      margin-top: 40px;
-      text-align: left;
-      padding: 10px 20px;
-    }
-  </style>
+  /* Match spacing/width with other pages */
+  main.wrap{
+    padding-top: 120px;   /* keeps heading clear of black strip */
+    max-width: 900px;     /* same content width */
+    margin: 0 auto;       /* center the content column */
+  }
+  @media (max-width: 640px){
+    main.wrap{ padding-top: 150px; } /* a touch more on phones */
+  }
+</style>
 </head>
 <body>
   <!-- Header -->
