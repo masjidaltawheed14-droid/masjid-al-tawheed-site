@@ -110,3 +110,8 @@ main {
     line-height: 1.4;
   }
 }
+/* Footer fix just for contact page */
+body.contact .footer {
+  margin-top: auto;
+  padding-top: 40px;
+}
