@@ -3,106 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Masjid Al-Tawheed</title>
+  <title>Masjid Al-Tawheed | Trust Registry</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: 'Georgia', serif;
+      font-family: "Georgia", serif;
       margin: 0;
       padding: 0;
-      background-color: #fff;
+      background-color: #f9f9f9;
       color: #222;
     }
 
-    header {
+    header, footer {
       text-align: center;
-      padding: 30px 15px 20px;
-    }
-
-    header img {
-      max-width: 160px;
-      height: auto;
-      margin-bottom: 15px;
-    }
-
-    nav {
+      padding: 20px;
       background-color: #111;
-      text-align: center;
-      padding: 10px 0;
-      z-index: 10;
+      color: #fff;
     }
 
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin: 0;
-      padding: 10px 15px;
-      line-height: 1.5;
-      vertical-align: middle;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: normal;
-      font-size: 1em;
-    }
-
-    nav ul li a:hover,
-    nav ul li a.active {
-      color: #f3c623;
-      border-bottom: 2px solid #f3c623;
+    h2 {
+      font-size: 2.2em;
+      margin-top: 20px;
     }
 
     .container {
-      padding: 20px;
-      max-width: 900px;
+      padding: 40px 20px;
+      max-width: 1100px;
       margin: auto;
+    }
+
+    .intro {
       text-align: center;
-    }
-
-    h1 {
-      font-size: 2.4em;
-      margin: 10px 0;
-      white-space: nowrap; /* Keeps Masjid Al-Tawheed on one line */
-    }
-
-    p {
       font-size: 1.1em;
-      line-height: 1.6;
+      max-width: 700px;
+      margin: 20px auto 40px;
     }
 
-    .highlight {
-      color: #1e3a8a;
-      font-weight: bold;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1em;
+      background-color: #fff;
     }
 
-    footer {
-      background-color: #111;
+    thead {
+      background-color: #222;
       color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-size: 0.9em;
     }
 
-    @media screen and (max-width: 768px) {
-      nav ul li {
+    th, td {
+      padding: 14px;
+      border: 1px solid #ccc;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
         display: block;
-        padding: 10px;
       }
 
-      header img {
-        margin-bottom: 10px;
+      thead {
+        display: none;
       }
 
-      h1 {
-        font-size: 1.8em;
+      td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #ddd;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
       }
     }
   </style>
@@ -110,32 +87,76 @@
 <body>
 
   <header>
-    <img src="your-logo-file.png" alt="Masjid Al-Tawheed Logo">
-    <h1>Masjid Al-Tawheed</h1>
+    <h1 style="white-space: nowrap;">Masjid Al-Tawheed</h1>
+    <p>Ecclesiastical Trust Registry</p>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="our-commitment.html">Our Commitment</a></li>
-      <li><a href="trust-framework.html">Trust Framework</a></li>
-      <li><a href="trust-registry.html">Trust Registry</a></li>
-      <li><a href="public-notices.html">Public Notices</a></li>
-      <li><a href="ministry-works.html">Ministry Works</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
   <div class="container">
-    <h2>Welcome to <span style="white-space: nowrap;">Masjid Al-Tawheed</span></h2>
-    <p>
-      Operating under the spiritual jurisdiction of the Most High, Masjid Al-Tawheed fulfills sacred fiduciary duties through its Ecclesiastical Treasury Framework (ETF), building a legacy of faith, credit, and stewardship.
+    <h2>Trust Registry</h2>
+    <p class="intro">
+      The following trusts operate under the ecclesiastical jurisdiction of Masjid Al-Tawheed (Ministry). Each trust serves a distinct sacred purpose and is administered through sealed stewardship and fiduciary order.
     </p>
-    <p class="highlight">Protected by Law. Guided by Faith. Recognized Worldwide.</p>
+
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr>
+            <th>Trust Name</th>
+            <th>Date Formed</th>
+            <th>Purpose</th>
+            <th>Oversight</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Trust Name">Masjid Al-Tawheed Treasury Holding Trust</td>
+            <td data-label="Date Formed">June 15, 2024</td>
+            <td data-label="Purpose">Holds and allocates spiritual credit for ministry works, refund filings, and inter-trust governance</td>
+            <td data-label="Oversight">Trustee: Masjid Al-Tawheed</td>
+          </tr>
+          <tr>
+            <td data-label="Trust Name">Ummah al-Warithun Housing & Property Trust</td>
+            <td data-label="Date Formed">June 17, 2024</td>
+            <td data-label="Purpose">Holds ministry-owned land, buildings, residential dwellings, and properties under spiritual title</td>
+            <td data-label="Oversight">Trustee: Masjid Al-Tawheed</td>
+          </tr>
+          <tr>
+            <td data-label="Trust Name">The Inheritor’s Education & Scholarship Trust</td>
+            <td data-label="Date Formed">June 20, 2024</td>
+            <td data-label="Purpose">Supports education, microschooling, curriculum creation, and ministry-aligned student needs</td>
+            <td data-label="Oversight">Trustee: Masjid Al-Tawheed</td>
+          </tr>
+          <tr>
+            <td data-label="Trust Name">Masjid Al-Tawheed Benevolence Trust</td>
+            <td data-label="Date Formed">June 21, 2024</td>
+            <td data-label="Purpose">Administers outreach, family support, and financial assistance to individuals in need</td>
+            <td data-label="Oversight">Trustee: Masjid Al-Tawheed</td>
+          </tr>
+          <tr>
+            <td data-label="Trust Name">Al-Warithun Holistic Health & Wellness Trust</td>
+            <td data-label="Date Formed">July 22, 2024</td>
+            <td data-label="Purpose">Supports faith-based wellness, nutrition programs, and holistic healing under spiritual guidance</td>
+            <td data-label="Oversight">Trustee: Masjid Al-Tawheed</td>
+          </tr>
+          <tr>
+            <td data-label="Trust Name">Ummah al-Warithun Ecclesiastical Copyright Trust</td>
+            <td data-label="Date Formed">July 24, 2024</td>
+            <td data-label="Purpose">Holds ministry-owned teachings, slogans, intellectual property, and creative works under seal</td>
+            <td data-label="Oversight">Trustee: Masjid Al-Tawheed</td>
+          </tr>
+          <tr>
+            <td data-label="Trust Name">Al-Warithun Life Insurance Trust</td>
+            <td data-label="Date Formed">July 17, 2024</td>
+            <td data-label="Purpose">Receives ministry-based spiritual credit assignments and supports post-life stewardship</td>
+            <td data-label="Oversight">Trustee: Masjid Al-Tawheed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <footer>
-    <p>&copy; 2024 Masjid Al-Tawheed | All Rights Reserved | Ecclesiastical Jurisdiction</p>
+    <p>Masjid Al-Tawheed &copy; 2024 – All rights reserved under ecclesiastical law</p>
   </footer>
 
 </body>
