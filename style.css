@@ -131,7 +131,16 @@ h1 {
 /* Black top stripe across all pages */
 body::before {
   content: "";
-  display: block;
-  height: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px; /* You can adjust this height */
   background-color: #1a1a1a;
+  z-index: 999;
+}
+
+/* Prevent content from hiding under the stripe */
+body {
+  padding-top: 30px; /* Should match stripe height */
 }
