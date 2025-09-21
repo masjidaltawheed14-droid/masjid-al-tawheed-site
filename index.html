@@ -1,158 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Masjid Al-Tawheed</title>
-  <link rel="icon" type="image/png" href="favicon_32x32.png">
-  <style>
-    :root { --ink:#111; --muted:#666; --line:#e6e6e6; --bg:#fafafa; }
-
-    html,body {
-      margin:0;
-      padding:0;
-      background:#fff;
-      color:var(--ink);
-      font:16px/1.6 Arial, sans-serif;
-    }
-
-    /* Header black strip */
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background-color: #222;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      z-index: 1000;
-      flex-wrap: wrap;
-    }
-
-    /* Push content down */
-    body { padding-top: 80px; }
-    @media (max-width: 640px) { body { padding-top: 150px; } }
-
-    /* Nav links */
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      padding: 6px 10px;
-      white-space: nowrap;
-    }
-    .nav-links a.active {
-      font-weight: bold;
-      color: #1e3a8a;
-      border-bottom: 2px solid #daa520;
-    }
-    .nav-links a:hover {
-      color: #1e3a8a;
-      border-bottom: 2px solid #daa520;
-    }
-
-    /* Wrapper for content */
-    .wrap {
-      max-width:860px;
-      margin:24px auto;
-      padding:0 20px;
-      text-align:center;
-    }
-
-    /* Logo */
-    .logo {
-      display:block;
-      margin:0 auto 20px;
-      max-width:220px;
-      height:auto;
-    }
-    @media (max-width:640px){
-      .logo { max-width:180px; margin-top:40px; }
-    }
-
-    h1 { font-size:28px; margin:0 0 12px }
-    .intro { color:var(--muted); margin:0 0 28px }
-
-    /* Tagline */
-    .tagline {
-      font-size: 20px;
-      font-weight: bold;
-      color: #1e3a8a; /* deep blue */
-      margin: 20px 0;
-      text-align: center;
-    }
-    @media (max-width: 640px) {
-      .tagline {
-        font-size: 16px;  /* slightly smaller on mobile */
-        padding: 0 10px;
-        line-height: 1.4;
-      }
-    }
-
-    .section {
-      background:#f5f5f5;
-      border-left:4px solid #1e3a8a;
-      padding:16px;
-      margin-bottom:20px;
-      text-align:left;
-    }
-    .section h2 { margin-top:0; color:#111 }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masjid Al-Tawheed | Trust Registry</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
   <header>
-    <nav class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="our-commitment.html">Our Commitment</a>
-      <a href="trust-framework.html">Trust Framework</a>
-<a href="trust-registry.html">Trust Registry</a>
-      <a href="public-notices.html">Public Notices</a>
-      <a href="ministry-works.html">Ministry Works</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <h1 class="nowrap">Masjid Al-Tawheed</h1>
+    <p class="subheading">Ecclesiastical Trust Registry</p>
   </header>
 
-  <main class="wrap">
-    <img src="Masjid_Al_Tawheed_Logo_Transparent.png" alt="Masjid Al-Tawheed Logo" class="logo">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="public-notices.html">Public Notices</a></li>
+      <li><a href="legal-notices.html">Legal Notices</a></li>
+      <li><a href="board.html">Board</a></li>
+      <li><a href="trust-registry.html" class="active">Trust Registry</a></li>
+    </ul>
+  </nav>
 
-    <h1>Welcome to <span style="white-space:nowrap;">Masjid Al-Tawheed</span></h1>
-    <p class="intro">
-      Operating under the spiritual jurisdiction of the Most High, Masjid Al-Tawheed fulfills sacred fiduciary duties
-      through its Ecclesiastical Treasury Framework (ETF), building a legacy of faith, credit, and stewardship.
-    </p>
+  <main>
+    <section>
+      <h2>Trust Registry</h2>
+      <p>
+        The following trusts operate under the ecclesiastical jurisdiction of
+        <strong>Masjid Al-Tawheed (Ministry)</strong>. Each trust serves a
+        distinct sacred purpose and is administered through sealed stewardship
+        and fiduciary order.
+      </p>
 
-    <h2 class="tagline">Protected by Law. Guided by Faith. Recognized Worldwide.</h2>
-
-    <div class="section">
-      <h2>First Amendment, 508(c)(1)(A) & International Protections</h2>
-      <p>
-        Masjid Al-Tawheed stands under the protections of the First Amendment to the U.S. Constitution:
-        <em>“Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof.”</em>
-      </p>
-      <p>
-        Masjid Al-Tawheed also operates under the inherent protections of
-        <strong>508(c)(1)(A)</strong>, which affirms that churches, ministries, and their
-        integrated auxiliaries are automatically tax-exempt and are not required to
-        apply for recognition with the IRS.
-      </p>
-      <p>
-        Beyond national recognition, our ministry is affirmed by international law:
-      </p>
-      <ul>
-        <li><strong>The Hague Convention</strong> — honoring human dignity, family jurisdiction, and non-commercial private assemblies.</li>
-        <li><strong>The United Nations Charter (Articles 18–20)</strong> — upholding freedom of belief, peaceful association, and religious expression.</li>
-        <li><strong>The Vienna Convention on the Law of Treaties</strong> — validating private ecclesiastical contracts and trust instruments under spiritual law.</li>
-      </ul>
-      <p>
-        Together, these protections ensure our ministry’s works, trusts, and assemblies remain free, spiritual, and sovereign.
-      </p>
-    </div>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Trust Name</th>
+              <th>Date Formed</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Al-Warithun Ecclesiastical Operations Trust</td>
+              <td>June 9, 2024</td>
+              <td>Oversees daily operations and administrative duties</td>
+            </tr>
+            <tr>
+              <td>Masjid Al-Tawheed Treasury Holding Trust</td>
+              <td>June 15, 2024</td>
+              <td>Holds and allocates spiritual credit for ministry treasury functions</td>
+            </tr>
+            <tr>
+              <td>Ummah al-Warithun Housing & Property Trust</td>
+              <td>June 15, 2024</td>
+              <td>Manages land, housing, and property-related missions</td>
+            </tr>
+            <tr>
+              <td>The Inheritor’s Education & Scholarship Trust</td>
+              <td>June 15, 2024</td>
+              <td>Supports education, homeschooling, and scholarship disbursement</td>
+            </tr>
+            <tr>
+              <td>Masjid al-Tawheed Benevolence Trust</td>
+              <td>June 15, 2024</td>
+              <td>Funds family support, relief, and outreach efforts</td>
+            </tr>
+            <tr>
+              <td>Al-Warithun Holistic Health & Wellness Trust</td>
+              <td>July 17, 2024</td>
+              <td>Supports holistic health, nutrition, and spiritual wellness programs</td>
+            </tr>
+            <tr>
+              <td>Al-Warithun Life Insurance Trust</td>
+              <td>July 17, 2024</td>
+              <td>Manages spiritual life assignments and memorial-related provisions</td>
+            </tr>
+            <tr>
+              <td>Ummah al-Warithun Ecclesiastical Copyright Trust</td>
+              <td>July 24, 2024</td>
+              <td>Houses ministry teachings, creative works, and copyrights</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <p>All rights reserved. Masjid Al-Tawheed &copy; 2025</p>
+  </footer>
 </body>
 </html>
