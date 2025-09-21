@@ -128,3 +128,10 @@ h1 {
 }
 
 
+/* Black top stripe across all pages */
+body::before {
+  content: "";
+  display: block;
+  height: 20px;
+  background-color: #1a1a1a;
+}
