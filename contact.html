@@ -1,15 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" class="contact">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Us – Masjid Al-Tawheed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Masjid Al-Tawheed</title>
+  <link rel="icon" type="image/png" href="favicon_32x32.png">
   <link rel="stylesheet" href="style.css">
+  <style>
+    main.wrap {
+      padding-top: 140px; /* ✅ extra space so heading clears black strip on desktop + mobile */
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .contact-info {
+      margin: 20px 0;
+      line-height: 1.8;
+    }
+    footer {
+      margin-top: auto;
+      text-align: left;   /* ✅ footer copyright stays left */
+      padding: 20px 15px;
+    }
+  </style>
 </head>
-<body class="contact">
-
-  <!-- Top Navigation -->
-  <nav>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="ministry-works.html">Ministry Works</a></li>
@@ -20,27 +38,24 @@
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
+  </header>
 
-  <!-- Page Content -->
-  <main>
+  <!-- Main Content -->
+  <main class="wrap">
+    <h1>Contact Us</h1>
     <div class="contact-info">
-      <p>If you have any questions, concerns, or would like to reach out to our ministry, please contact us using the information below:</p>
-
-      <p>Email: <a href="mailto:masjidmail@protonmail.com">masjidmail@protonmail.com</a></p>
-
-      <p>Mailing Address:<br>
-      Masjid Al-Tawheed<br>
-      P.O. Box 71<br>
+      <p><strong>Mailing Address:</strong><br>
+      PO Box 71<br>
       Davis Station, SC 29041</p>
 
-      <p>We look forward to hearing from you.</p>
+      <p><strong>Email:</strong><br>
+      masjidaltawheed14@gmail.com</p>
     </div>
   </main>
 
   <!-- Footer -->
-  <div class="footer">
+  <footer>
     © 2025 Masjid Al-Tawheed. All Rights Reserved.
-  </div>
-
+  </footer>
 </body>
 </html>
