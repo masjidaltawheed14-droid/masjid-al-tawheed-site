@@ -78,3 +78,35 @@ h1 {
 
 .tagline {
   text-align: cen
+/* Footer styling */
+.footer {
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+/* Push footer to bottom when content is short */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 640px) {
+  .footer {
+    font-size: 13px;
+    padding: 30px 10px 20px;
+    line-height: 1.4;
+  }
+}
