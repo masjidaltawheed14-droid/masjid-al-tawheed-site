@@ -1,4 +1,4 @@
-body {
+body { 
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fff;
@@ -77,70 +77,4 @@ h1 {
 }
 
 .tagline {
-  text-align: center;
-  font-style: italic;
-  color: #444;
-  margin-bottom: 30px;
-}
-
-.notice {
-  background-color: #f5f5f5;
-  border-left: 5px solid #1e40af;
-  padding: 15px 20px;
-  margin-top: 30px;
-}
-
-.notice h3 {
-  margin-top: 0;
-}
-
-.notice ul {
-  padding-left: 20px;
-}
-
-.notice li {
-  margin-bottom: 12px;
-  line-height: 1.6;
-}
-
-/* Mobile adjustments */
-@media screen and (max-width: 640px) {
-  .logo {
-    max-height: 60px;
-  }
-
-  h1 {
-    font-size: 1.6em;
-    margin-top: 15px;
-  }
-
-  .tagline {
-    font-size: 14px;
-  }
-
-  .nav-links li {
-    margin: 6px 10px;
-  }
-
-  main {
-    padding: 15px;
-  }
-}
-
-
-/* Black top stripe across all pages */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 30px; /* You can adjust this height */
-  background-color: #1a1a1a;
-  z-index: 999;
-}
-
-/* Prevent content from hiding under the stripe */
-body {
-  padding-top: 30px; /* Should match stripe height */
-}
+  text-align: cen
