@@ -310,27 +310,33 @@ h1 {
 .shaded-box h3 {
   margin-top: 20px;
 }
-/* ✅ Unified Public Notice Styling */
 .notice {
-  background: #f9fafb;              /* light neutral background */
-  border-left: 5px solid #1e40af;   /* bold ministry blue accent bar */
-  padding: 20px 18px;
-  margin: 25px 0;
+  background: linear-gradient(135deg, #1e40af 0%, #facc15 100%);
+  color: #fff;
+  padding: 25px;
+  margin: 30px auto;
+  max-width: 900px;
   border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08); /* subtle shadow */
-  line-height: 1.6;
-  font-size: 1em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.notice h3 {
-  margin: 0 0 6px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #111;
+.notice h3, 
+.notice h4 {
+  color: #fff; /* keep headings white */
+  margin-top: 0;
 }
 
 .notice .meta {
   font-size: 0.9em;
-  color: #555;
+  color: #fffbeb; /* softer goldish white */
   margin-bottom: 12px;
+}
+
+.notice ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.notice li strong {
+  color: #fffbeb; /* emphasis text matches protections */
 }
