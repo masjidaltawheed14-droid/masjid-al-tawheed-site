@@ -129,11 +129,12 @@ body.contact .footer {
 
   footer {
   margin-top: auto;
-  text-align: left;     /* ✅ keeps footer text left-aligned */
+  text-align: left;   /* ✅ centered everywhere */
   padding: 10px 15px;
   font-size: 14px;
-  white-space: nowrap;  /* ✅ prevents “Reserved” from wrapping to next line */
+  white-space: nowrap;  /* ✅ no wrapping on mobile */
 }
+
 
 }
 
