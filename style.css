@@ -310,3 +310,10 @@ h1 {
 .shaded-box h3 {
   margin-top: 20px;
 }
+.notice {
+  background: #f0f4ff;           /* soft shaded background */
+  border-left: 4px solid #1e40af; /* ministry blue accent bar */
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 6px;
+}
