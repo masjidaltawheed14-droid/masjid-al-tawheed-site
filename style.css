@@ -137,12 +137,12 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 2.2em;   /* scales with text size */
+  right: 0;             /* ✅ ensure it stretches fully */
+  width: 100vw;         /* ✅ viewport width instead of 100% */
+  height: 30px;
   background-color: #1a1a1a;
   z-index: 999;
 }
-
 /* Prevent content from hiding under the stripe */
 body {
   padding-top: 2.2em;  /* matches stripe height */
