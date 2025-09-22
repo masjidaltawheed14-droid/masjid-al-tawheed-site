@@ -179,3 +179,28 @@ body {
 .protections li strong {
   color: #fffbeb; /* softer goldish-white for emphasis */
 }
+/* Responsive adjustments for small screens */
+@media screen and (max-width: 640px) {
+  /* Adjust big headings */
+  h1 {
+    font-size: 1.5em;
+  }
+
+  /* Adjust tagline (italic subtitle under h1) */
+  .tagline {
+    font-size: 0.9em;
+  }
+
+  /* Adjust body paragraphs */
+  main p {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+
+  /* Adjust the blue protections box heading */
+  .notice h3 {
+    font-size: 1.2em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
