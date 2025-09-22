@@ -104,8 +104,8 @@ footer {
 body.contact footer {
   margin-top: auto;
   padding-top: 40px;
+  font-size: 14px;  /* ✅ force same size as global footer */
 }
-
 /* Mobile adjustments */
 @media screen and (max-width: 640px) {
   .logo {
