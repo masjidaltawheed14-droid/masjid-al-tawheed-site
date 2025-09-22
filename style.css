@@ -9,6 +9,7 @@ html, body {
   flex-direction: column;
 }
 
+/* Navigation */
 nav {
   background-color: #1a1a1a;
   padding: 10px 0;
@@ -88,18 +89,19 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* Footer styling */
-.footer {
-  text-align: center;
+/* Footer styling - unified */
+footer {
+  text-align: left;        /* ✅ always aligned left */
   font-size: 14px;
   color: #000;
   margin-top: 50px;
-  padding-bottom: 20px;
+  padding: 10px 15px 20px;
   position: relative;
+  white-space: nowrap;     /* ✅ prevent wrapping on mobile */
 }
 
 /* Fix for contact page (in case it has limited content) */
-body.contact .footer {
+body.contact footer {
   margin-top: auto;
   padding-top: 40px;
 }
@@ -126,16 +128,6 @@ body.contact .footer {
   main {
     padding: 15px;
   }
-
-  footer {
-  margin-top: auto;
-  text-align: left;   /* ✅ centered everywhere */
-  padding: 10px 15px;
-  font-size: 14px;
-  white-space: nowrap;  /* ✅ no wrapping on mobile */
-}
-
-
 }
 
 /* Black top stripe across all pages */
@@ -154,6 +146,8 @@ body::before {
 body {
   padding-top: 30px;
 }
+
+/* Contact page alignment */
 .contact-info {
   text-align: center;
   max-width: 600px;
