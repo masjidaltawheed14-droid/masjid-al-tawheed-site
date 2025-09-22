@@ -131,20 +131,21 @@ body.contact footer {
 }
 
 /* Black top stripe across all pages */
+/* Black top stripe across all pages */
 body::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 30px;
+  height: 2.2em;   /* scales with text size */
   background-color: #1a1a1a;
   z-index: 999;
 }
 
 /* Prevent content from hiding under the stripe */
 body {
-  padding-top: 30px;
+  padding-top: 2.2em;  /* matches stripe height */
 }
 
 /* Contact page alignment */
@@ -202,5 +203,62 @@ body {
     font-size: 1.2em;
     word-wrap: break-word;
     overflow-wrap: break-word;
+  }
+}
+/* Make long text fit on mobile without zoom */
+body, main, p, li, h1, h2, h3 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.notice {
+  padding: 15px;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 640px) {
+  .notice ul {
+    padding-left: 20px;  /* keeps bullets neat */
+  }
+
+  .notice li {
+    font-size: 0.95em;   /* slightly smaller so everything fits */
+  }
+
+  main p {
+    font-size: 0.95em;
+  }
+}
+/* Logo + heading alignment */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* space between logo and text */
+  flex-wrap: nowrap;
+  margin: 20px 0;
+}
+
+.logo-container img.logo {
+  max-height: 80px;
+  height: auto;
+  width: auto;
+}
+
+.logo-container h1 {
+  font-size: 2em;
+  margin: 0;
+  white-space: nowrap; /* ✅ keeps it all on one line */
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 640px) {
+  .logo-container img.logo {
+    max-height: 50px; /* shrink logo */
+  }
+
+  .logo-container h1 {
+    font-size: 1.2em; /* shrink heading text */
   }
 }
