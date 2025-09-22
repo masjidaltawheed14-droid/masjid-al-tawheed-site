@@ -62,7 +62,7 @@ nav {
 }
 
 .logo {
-  max-height: 80px;
+  max-height: 120px;   /* bigger for desktop */
   width: auto;
 }
 
@@ -80,8 +80,8 @@ h1 {
   margin-bottom: 10px;
   margin-top: 20px;
   color: #111;
+  white-space: nowrap; /* ✅ keep text on one line */
 }
-
 .tagline {
   text-align: center;
   font-style: italic;
@@ -109,9 +109,9 @@ body.contact footer {
 /* Mobile adjustments */
 @media screen and (max-width: 640px) {
   .logo {
-    max-height: 60px;
+    max-height: 90px;  /* slightly smaller for mobile */
+    width: auto;
   }
-
   h1 {
     font-size: 1.6em;
     margin-top: 15px;
