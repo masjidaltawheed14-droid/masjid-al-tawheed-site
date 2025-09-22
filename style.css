@@ -262,3 +262,29 @@ body, main, p, li, h1, h2, h3 {
     font-size: 1.2em; /* shrink heading text */
   }
 }
+.logo-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.logo {
+  max-height: 140px;  /* bigger on desktop */
+  width: auto;
+}
+
+.site-title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 2em;
+  color: #111;
+}
+
+/* scale logo smaller on mobile */
+@media screen and (max-width: 640px) {
+  .logo {
+    max-height: 90px;
+  }
+  .site-title {
+    font-size: 1.6em;
+  }
+}
