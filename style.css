@@ -288,3 +288,14 @@ body, main, p, li, h1, h2, h3 {
     font-size: 1.6em;
   }
 }
+h1 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 1.5em;   /* slightly smaller on phones */
+    line-height: 1.2;
+  }
+}
