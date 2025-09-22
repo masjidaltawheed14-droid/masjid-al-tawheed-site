@@ -154,3 +154,28 @@ body {
   margin: 0 auto;
   line-height: 1.6;
 }
+/* Protections section shading - Gradient Version */
+.protections {
+  background: linear-gradient(135deg, #1e40af 0%, #facc15 100%);
+  color: #fff;  /* white text for contrast */
+  padding: 25px;
+  margin: 30px auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.protections h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #fff; /* heading white */
+}
+
+.protections ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.protections li strong {
+  color: #fffbeb; /* softer goldish-white for emphasis */
+}
