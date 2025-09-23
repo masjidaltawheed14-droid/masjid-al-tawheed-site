@@ -22,12 +22,11 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background: none !important; /* kill white box */
+  background: none !important;
 }
 
 .nav-links li {
   margin: 10px 15px;
-  background: none !important;
 }
 
 .nav-links a {
@@ -35,7 +34,6 @@ nav {
   text-decoration: none;
   font-weight: bold;
   position: relative;
-  background: none !important;
   padding: 5px 10px;
   display: inline-block;
 }
@@ -62,7 +60,7 @@ nav {
 }
 
 .logo {
-  max-height: 120px;   /* bigger for desktop */
+  max-height: 120px;
   width: auto;
 }
 
@@ -80,8 +78,9 @@ h1 {
   margin-bottom: 10px;
   margin-top: 20px;
   color: #111;
-  white-space: nowrap; /* ✅ keep text on one line */
+  white-space: nowrap;
 }
+
 .tagline {
   text-align: center;
   font-style: italic;
@@ -89,63 +88,59 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* Footer styling - unified */
+/* Footer styling */
 footer {
-  text-align: left;        /* ✅ always aligned left */
+  text-align: left;
   font-size: 14px;
   color: #000;
   margin-top: 50px;
   padding: 10px 15px 20px;
   position: relative;
-  white-space: nowrap;     /* ✅ prevent wrapping on mobile */
+  white-space: nowrap;
 }
 
-/* Fix for contact page (in case it has limited content) */
+/* Fix for contact page */
 body.contact footer {
   margin-top: auto;
   padding-top: 40px;
-  font-size: 14px;  /* ✅ force same size as global footer */
+  font-size: 14px;
 }
+
 /* Mobile adjustments */
 @media screen and (max-width: 640px) {
   .logo {
-    max-height: 90px;  /* slightly smaller for mobile */
-    width: auto;
+    max-height: 90px;
   }
   h1 {
     font-size: 1.6em;
     margin-top: 15px;
   }
-
   .tagline {
     font-size: 14px;
   }
-
   .nav-links li {
     margin: 6px 10px;
   }
-
   main {
     padding: 15px;
   }
 }
 
-/* Black top stripe across all pages */
-/* Black top stripe across all pages */
+/* Black top stripe */
 body::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;             /* ✅ ensure it stretches fully */
-  width: 100vw;         /* ✅ viewport width instead of 100% */
+  right: 0;
+  width: 100vw;
   height: 30px;
   background-color: #1a1a1a;
   z-index: 999;
 }
-/* Prevent content from hiding under the stripe */
+
 body {
-  padding-top: 2.2em;  /* matches stripe height */
+  padding-top: 2.2em;
 }
 
 /* Contact page alignment */
@@ -155,87 +150,72 @@ body {
   margin: 0 auto;
   line-height: 1.6;
 }
-/* Protections section shading - Gradient Version */
-.protections {
+
+/* ✅ Unified Gradient Box (Protections + Notices) */
+.gradient-box {
   background: linear-gradient(135deg, #1e40af 0%, #facc15 100%);
-  color: #fff;  /* white text for contrast */
+  color: #fff;
   padding: 25px;
   margin: 30px auto;
-  max-width: 800px;
+  max-width: 900px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.protections h2 {
-  text-align: center;
-  margin-bottom: 15px;
-  color: #fff; /* heading white */
-}
-
-.protections ul {
-  padding-left: 20px;
+  font-size: 1em;
   line-height: 1.6;
 }
 
-.protections li strong {
-  color: #fffbeb; /* softer goldish-white for emphasis */
+.gradient-box h2,
+.gradient-box h3,
+.gradient-box h4 {
+  color: #fff;
+  margin-top: 0;
 }
-/* Responsive adjustments for small screens */
+
+.gradient-box .meta {
+  font-size: 0.9em;
+  color: #fffbeb;
+  margin-bottom: 12px;
+}
+
+.gradient-box ul {
+  padding-left: 20px;
+}
+
+.gradient-box li strong {
+  color: #fffbeb;
+}
+
+/* Responsive adjustments */
 @media screen and (max-width: 640px) {
-  /* Adjust big headings */
   h1 {
     font-size: 1.5em;
   }
-
-  /* Adjust tagline (italic subtitle under h1) */
   .tagline {
     font-size: 0.9em;
   }
-
-  /* Adjust body paragraphs */
   main p {
     font-size: 0.95em;
     line-height: 1.5;
   }
-
-  /* Adjust the blue protections box heading */
-  .notice h3 {
+  .gradient-box h3 {
     font-size: 1.2em;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
 }
-/* Make long text fit on mobile without zoom */
+
+/* Prevent overflow on mobile */
 body, main, p, li, h1, h2, h3 {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
-.notice {
-  padding: 15px;
-  font-size: 1em;
-  line-height: 1.5;
-}
-
-@media screen and (max-width: 640px) {
-  .notice ul {
-    padding-left: 20px;  /* keeps bullets neat */
-  }
-
-  .notice li {
-    font-size: 0.95em;   /* slightly smaller so everything fits */
-  }
-
-  main p {
-    font-size: 0.95em;
-  }
-}
 /* Logo + heading alignment */
 .logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px; /* space between logo and text */
+  gap: 12px;
   flex-wrap: nowrap;
   margin: 20px 0;
 }
@@ -249,26 +229,25 @@ body, main, p, li, h1, h2, h3 {
 .logo-container h1 {
   font-size: 2em;
   margin: 0;
-  white-space: nowrap; /* ✅ keeps it all on one line */
+  white-space: nowrap;
 }
 
-/* Mobile adjustments */
 @media screen and (max-width: 640px) {
   .logo-container img.logo {
-    max-height: 50px; /* shrink logo */
+    max-height: 50px;
   }
-
   .logo-container h1 {
-    font-size: 1.2em; /* shrink heading text */
+    font-size: 1.2em;
   }
 }
+
 .logo-container {
   text-align: center;
   margin-top: 20px;
 }
 
 .logo {
-  max-height: 140px;  /* bigger on desktop */
+  max-height: 140px;
   width: auto;
 }
 
@@ -279,7 +258,6 @@ body, main, p, li, h1, h2, h3 {
   color: #111;
 }
 
-/* scale logo smaller on mobile */
 @media screen and (max-width: 640px) {
   .logo {
     max-height: 90px;
@@ -288,6 +266,7 @@ body, main, p, li, h1, h2, h3 {
     font-size: 1.6em;
   }
 }
+
 h1 {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -295,49 +274,7 @@ h1 {
 
 @media screen and (max-width: 640px) {
   h1 {
-    font-size: 1.5em;   /* slightly smaller on phones */
+    font-size: 1.5em;
     line-height: 1.2;
   }
-}
-.shaded-box {
-  
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-.shaded-box h3 {
-  margin-top: 20px;
-}
-.notice {
- /* ✅ Public Notices styled like protections */
-.notice {
-  background: linear-gradient(135deg, #1e40af 0%, #facc15 100%) !important;
-  color: #fff !important;
-  padding: 25px;
-  margin: 30px auto;
-  max-width: 900px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.notice h3,
-.notice h4 {
-  color: #fff !important; /* headings stay readable */
-}
-
-.notice .meta {
-  font-size: 0.9em;
-  color: #fffbeb !important; /* soft gold */
-  margin-bottom: 12px;
-}
-
-.notice ul {
-  padding-left: 20px;
-  line-height: 1.6;
-}
-
-.notice li strong {
-  color: #fffbeb !important;
 }
