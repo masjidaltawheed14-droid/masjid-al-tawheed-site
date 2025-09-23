@@ -278,3 +278,21 @@ h1 {
     line-height: 1.2;
   }
 }
+/* Force-perfect centering for Contact inside gradient box */
+.gradient-box .contact-info{
+  max-width: 600px;
+  margin: 0 auto;         /* center the block */
+  text-align: center;     /* center the text */
+  display: flex;          /* center the children */
+  flex-direction: column;
+  align-items: center;    /* ← fixes the slight left shift */
+}
+
+.gradient-box .contact-info p{
+  margin: 0 0 14px;       /* tidy spacing */
+}
+
+.gradient-box a{
+  color: #fffbeb;         /* readable on the gradient */
+  text-decoration: none;
+}
