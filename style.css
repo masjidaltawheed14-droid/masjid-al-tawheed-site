@@ -296,3 +296,72 @@ h1 {
   color: #fffbeb;         /* readable on the gradient */
   text-decoration: none;
 }
+/* Trust Registry Page Styling */
+.centered-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.gradient-box {
+  background: linear-gradient(135deg, #1e40af 0%, #facc15 100%);
+  color: #fff;
+  padding: 25px;
+  margin: 30px auto;
+  max-width: 1000px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.gradient-box p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Trust Registry Table */
+.trust-registry {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.trust-registry th,
+.trust-registry td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.trust-registry th {
+  font-weight: bold;
+  color: #fffbeb; /* softer gold for headers */
+}
+
+.trust-registry tr:last-child td {
+  border-bottom: none;
+}
+
+.trust-registry td {
+  line-height: 1.5;
+}
+
+/* Responsive: Stack table on small screens */
+@media screen and (max-width: 768px) {
+  .trust-registry th,
+  .trust-registry td {
+    display: block;
+    text-align: left;
+    padding: 8px 0;
+  }
+
+  .trust-registry tr {
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    display: block;
+  }
+
+  .trust-registry th {
+    font-size: 0.9em;
+  }
+}
