@@ -66,45 +66,51 @@ body::before {
   top: 0;
   left: 0;
   right: 0;
-  width: 100% !important;   /* ✅ fix right gap */
+  width: 100%;      /* ✅ stretch full width */
   height: 30px;
   background-color: #1a1a1a;
-  z-index: 999;
+  z-index: 9999;    /* keep it above everything */
 }
-
+body {
+  padding-top: 30px; /* ✅ exactly matches stripe height */
+  margin: 0;
+}
 /* =======================
    Logo + Heading
    ======================= */
 .logo-container {
+  display: flex;
+  flex-direction: column; /* ✅ stack logo above heading */
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin: 20px 0 10px;
+  margin: 20px 0;
+  gap: 10px;
 }
-
-.logo {
-  max-height: 140px;   /* ✅ unified desktop logo size */
+.logo-container img.logo {
+  max-height: 120px;  /* ✅ same size as before */
+  height: auto;
   width: auto;
 }
 
 .logo-container h1 {
   font-size: 2em;
   margin: 0;
-  color: #111;
   text-align: center;
-  white-space: nowrap; /* desktop only */
+  white-space: normal;  /* ✅ allow wrapping on mobile */
+  line-height: 1.2;
 }
 
-/* ✅ allow wrapping on mobile */
 @media screen and (max-width: 640px) {
-  .logo {
-    max-height: 90px;   /* ✅ unified mobile size */
+  .logo-container img.logo {
+    max-height: 90px; /* ✅ shrink for mobile */
   }
+
   .logo-container h1 {
-    font-size: 1.4em !important;
-    white-space: normal !important;  /* ✅ wraps instead of cutoff */
+    font-size: 1.4em;
     line-height: 1.3;
   }
 }
-
 /* =======================
    Tagline
    ======================= */
