@@ -1,4 +1,6 @@
-/* General body styles */
+/* =======================
+   General body styles
+   ======================= */
 html, body {
   height: 100%;
   margin: 0;
@@ -7,9 +9,12 @@ html, body {
   color: #000;
   display: flex;
   flex-direction: column;
+  padding-top: 2.2em; /* prevent hiding under top stripe */
 }
 
-/* Navigation */
+/* =======================
+   Navigation
+   ======================= */
 nav {
   background-color: #1a1a1a;
   padding: 10px 0;
@@ -22,7 +27,6 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background: none !important;
 }
 
 .nav-links li {
@@ -53,34 +57,57 @@ nav {
   background-color: #facc15;
 }
 
-/* Logo Styling */
+/* =======================
+   Top black stripe
+   ======================= */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100% !important;   /* ✅ fix right gap */
+  height: 30px;
+  background-color: #1a1a1a;
+  z-index: 999;
+}
+
+/* =======================
+   Logo + Heading
+   ======================= */
 .logo-container {
   text-align: center;
   margin: 20px 0 10px;
 }
 
 .logo {
-  max-height: 120px;
+  max-height: 140px;   /* ✅ unified desktop logo size */
   width: auto;
 }
 
-/* Headings and body */
-main {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
-  flex: 1;
-}
-
-h1 {
-  text-align: center;
+.logo-container h1 {
   font-size: 2em;
-  margin-bottom: 10px;
-  margin-top: 20px;
+  margin: 0;
   color: #111;
-  white-space: nowrap;
+  text-align: center;
+  white-space: nowrap; /* desktop only */
 }
 
+/* ✅ allow wrapping on mobile */
+@media screen and (max-width: 640px) {
+  .logo {
+    max-height: 90px;   /* ✅ unified mobile size */
+  }
+  .logo-container h1 {
+    font-size: 1.4em !important;
+    white-space: normal !important;  /* ✅ wraps instead of cutoff */
+    line-height: 1.3;
+  }
+}
+
+/* =======================
+   Tagline
+   ======================= */
 .tagline {
   text-align: center;
   font-style: italic;
@@ -88,7 +115,33 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* Footer styling */
+/* =======================
+   Main content
+   ======================= */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  flex: 1;
+}
+
+h1, h2, h3 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 640px) {
+  h1 { font-size: 1.5em; }
+  .tagline { font-size: 0.9em; }
+  main p {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+}
+
+/* =======================
+   Footer
+   ======================= */
 footer {
   text-align: left;
   font-size: 14px;
@@ -99,65 +152,20 @@ footer {
   white-space: nowrap;
 }
 
-/* Fix for contact page */
 body.contact footer {
   margin-top: auto;
   padding-top: 40px;
-  font-size: 14px;
 }
 
-/* Mobile adjustments */
-@media screen and (max-width: 640px) {
-  .logo {
-    max-height: 90px;
-  }
-  h1 {
-    font-size: 1.6em;
-    margin-top: 15px;
-  }
-  .tagline {
-    font-size: 14px;
-  }
-  .nav-links li {
-    margin: 6px 10px;
-  }
-  main {
-    padding: 15px;
-  }
-}
-
-/* Black top stripe */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100vw;
-  height: 30px;
-  background-color: #1a1a1a;
-  z-index: 999;
-}
-
-body {
-  padding-top: 2.2em;
-}
-
-/* Contact page alignment */
-.contact-info {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* ✅ Unified Gradient Box (Protections + Notices) */
+/* =======================
+   Gradient Box (Protections + Notices + Registry + Contact)
+   ======================= */
 .gradient-box {
   background: linear-gradient(135deg, #1e40af 0%, #facc15 100%);
   color: #fff;
   padding: 25px;
   margin: 30px auto;
-  max-width: 900px;
+  max-width: 1000px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   font-size: 1em;
@@ -185,140 +193,33 @@ body {
   color: #fffbeb;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 640px) {
-  h1 {
-    font-size: 1.5em;
-  }
-  .tagline {
-    font-size: 0.9em;
-  }
-  main p {
-    font-size: 0.95em;
-    line-height: 1.5;
-  }
-  .gradient-box h3 {
-    font-size: 1.2em;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-}
-
-/* Prevent overflow on mobile */
-body, main, p, li, h1, h2, h3 {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-/* Logo + heading alignment */
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: nowrap;
-  margin: 20px 0;
-}
-
-.logo-container img.logo {
-  max-height: 80px;
-  height: auto;
-  width: auto;
-}
-
-.logo-container h1 {
-  font-size: 2em;
-  margin: 0;
-  white-space: nowrap;
-}
-
-@media screen and (max-width: 640px) {
-  .logo-container img.logo {
-    max-height: 50px;
-  }
-  .logo-container h1 {
-    font-size: 1.2em;
-  }
-}
-
-.logo-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.logo {
-  max-height: 140px;
-  width: auto;
-}
-
-.site-title {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 2em;
-  color: #111;
-}
-
-@media screen and (max-width: 640px) {
-  .logo {
-    max-height: 90px;
-  }
-  .site-title {
-    font-size: 1.6em;
-  }
-}
-
-h1 {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-@media screen and (max-width: 640px) {
-  h1 {
-    font-size: 1.5em;
-    line-height: 1.2;
-  }
-}
-/* Force-perfect centering for Contact inside gradient box */
-.gradient-box .contact-info{
+/* =======================
+   Contact page inside gradient box
+   ======================= */
+.gradient-box .contact-info {
   max-width: 600px;
-  margin: 0 auto;         /* center the block */
-  text-align: center;     /* center the text */
-  display: flex;          /* center the children */
-  flex-direction: column;
-  align-items: center;    /* ← fixes the slight left shift */
+  margin: 0 auto;
+  text-align: center;
 }
 
-.gradient-box .contact-info p{
-  margin: 0 0 14px;       /* tidy spacing */
+.gradient-box .contact-info p {
+  margin: 0 0 14px;
 }
 
-.gradient-box a{
-  color: #fffbeb;         /* readable on the gradient */
+.gradient-box a {
+  color: #fffbeb;
   text-decoration: none;
 }
-/* Trust Registry Page Styling */
+
+/* =======================
+   Trust Registry
+   ======================= */
 .centered-heading {
   text-align: center;
   margin-bottom: 20px;
   color: #111;
 }
 
-.gradient-box {
-  background: linear-gradient(135deg, #1e40af 0%, #facc15 100%);
-  color: #fff;
-  padding: 25px;
-  margin: 30px auto;
-  max-width: 1000px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.gradient-box p {
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-/* Trust Registry Table */
 .trust-registry {
   width: 100%;
   border-collapse: collapse;
@@ -335,7 +236,7 @@ h1 {
 
 .trust-registry th {
   font-weight: bold;
-  color: #fffbeb; /* softer gold for headers */
+  color: #fffbeb;
 }
 
 .trust-registry tr:last-child td {
@@ -346,7 +247,7 @@ h1 {
   line-height: 1.5;
 }
 
-/* Responsive: Stack table on small screens */
+/* ✅ Responsive table for small screens */
 @media screen and (max-width: 768px) {
   .trust-registry th,
   .trust-registry td {
@@ -354,36 +255,28 @@ h1 {
     text-align: left;
     padding: 8px 0;
   }
-
   .trust-registry tr {
     margin-bottom: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     display: block;
   }
-
   .trust-registry th {
     font-size: 0.9em;
   }
 }
-/* Fix: allow welcome heading to wrap on mobile */
+/* =======================
+   Mobile Navigation Fix
+   ======================= */
 @media screen and (max-width: 640px) {
-  .logo-container h1 {
-    font-size: 1.4em;
-    white-space: normal;   /* ✅ allow wrapping on small screens */
-    text-align: center;
-    line-height: 1.3;      /* ✅ nice spacing */
+  .nav-links {
+    display: grid;                 /* grid for clean rows */
+    grid-template-columns: repeat(2, auto); /* 2 columns */
+    justify-content: center;       /* center the grid */
+    gap: 10px 20px;                /* row/col spacing */
   }
-}
 
-/* Fix: black stripe gap on right side */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;          /* ✅ stretch full width */
-  width: 100%;       /* ✅ fix gap issue */
-  height: 30px;
-  background-color: #1a1a1a;
-  z-index: 999;
+  .nav-links li {
+    margin: 0;                     /* remove extra spacing */
+    text-align: center;
+  }
 }
