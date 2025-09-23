@@ -365,3 +365,25 @@ h1 {
     font-size: 0.9em;
   }
 }
+/* Fix: allow welcome heading to wrap on mobile */
+@media screen and (max-width: 640px) {
+  .logo-container h1 {
+    font-size: 1.4em;
+    white-space: normal;   /* ✅ allow wrapping on small screens */
+    text-align: center;
+    line-height: 1.3;      /* ✅ nice spacing */
+  }
+}
+
+/* Fix: black stripe gap on right side */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;          /* ✅ stretch full width */
+  width: 100%;       /* ✅ fix gap issue */
+  height: 30px;
+  background-color: #1a1a1a;
+  z-index: 999;
+}
