@@ -310,3 +310,37 @@ footer {
   text-align: center;     /* Make sure each line centers */
   display: block;
 }
+/* ✅ Trust Registry Mobile Fix */
+@media screen and (max-width: 768px) {
+  .trust-registry {
+    display: block;
+    width: 100%;
+  }
+
+  .trust-registry tr {
+    display: block;
+    background: rgba(255,255,255,0.05);
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+  }
+
+  .trust-registry th {
+    display: none; /* Hide header row on mobile */
+  }
+
+  .trust-registry td {
+    display: block;
+    text-align: left;
+    padding: 4px 0;
+    border: none;
+  }
+
+  .trust-registry td::before {
+    content: attr(data-label); /* Show the label (Trust Name, Date Formed, Purpose) */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 2px;
+    color: #fffbeb;
+  }
+}
