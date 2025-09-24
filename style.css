@@ -381,3 +381,21 @@ body {
   flex-direction: column;
   min-height: 100vh;              /* ensure full height so footer stays at bottom */
 }
+/* ✅ Uniform footer across all pages */
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+  margin-top: 50px;
+  padding: 15px 0;
+}
+
+/* Keep footer pushed down when page has little content */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
