@@ -294,3 +294,19 @@ footer {
     gap: 15px;                /* ✅ adds even spacing between tabs */
   }
 }
+/* ✅ Center Mailing Address + Email on Contact Page */
+.contact-info {
+  text-align: center;     /* Center all text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Force child elements to center */
+  justify-content: center;
+}
+
+.contact-info p,
+.contact-info strong,
+.contact-info a {
+  margin: 5px 0;
+  text-align: center;     /* Make sure each line centers */
+  display: block;
+}
