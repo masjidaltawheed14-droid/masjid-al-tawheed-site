@@ -364,3 +364,20 @@ footer {
 .contact-info .intro {
   margin-bottom: 15px; /* keeps intro slightly separate */
 }
+/* Uniform Footer Styling */
+footer {
+  font-size: 13px;                /* consistent, subtle size */
+  color: #555;                    /* softer gray instead of harsh black */
+  text-align: center;             /* always centered */
+  margin-top: auto;               /* pushes footer down */
+  padding: 15px 10px;             /* even spacing */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;              /* ensure full height so footer stays at bottom */
+}
