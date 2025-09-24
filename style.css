@@ -9,12 +9,12 @@ html, body {
   color: #000;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;   /* ✅ keeps footer at bottom */
 }
 
 /* ===========================
    Navigation
 =========================== */
-/* Navigation */
 nav {
   background-color: #1a1a1a;
   padding: 10px 0;
@@ -27,11 +27,10 @@ nav {
   display: flex;
   justify-content: space-around;  /* ✅ evenly space all tabs */
   flex-wrap: wrap;
-  background: none !important;
 }
 
 .nav-links li {
-  margin: 8px 0; /* ✅ less side margin since space-around handles gaps */
+  margin: 8px 0;
 }
 
 .nav-links a {
@@ -57,6 +56,7 @@ nav {
   width: 100%;
   background-color: #facc15;
 }
+
 /* ===========================
    Black top stripe (fixed gap)
 =========================== */
@@ -70,8 +70,8 @@ body::before {
   background-color: #1a1a1a;
   z-index: 999;
 }
+
 body {
-  margin: 0;
   padding-top: 35px;         /* match stripe height */
 }
 
@@ -89,7 +89,7 @@ body {
 }
 
 .logo-container img.logo {
-  max-height: 140px; /* desktop size */
+  max-height: 140px;
   width: auto;
 }
 
@@ -103,10 +103,10 @@ body {
 
 @media screen and (max-width: 640px) {
   .logo-container img.logo {
-    max-height: 90px; /* mobile logo */
+    max-height: 90px;
   }
   .logo-container h1 {
-    font-size: 1.4em; /* smaller heading */
+    font-size: 1.4em;
   }
 }
 
@@ -277,125 +277,14 @@ h1 {
 }
 
 /* ===========================
-   Footer
+   Footer (Uniform)
 =========================== */
 footer {
-  text-align: left;
   font-size: 14px;
   color: #000;
-  margin-top: 50px;
-  padding: 10px 15px 20px;
-  position: relative;
-  white-space: nowrap;
-}
-@media screen and (max-width: 768px) {
-  .nav-links {
-    justify-content: center;  /* ✅ keep nav items centered on mobile */
-    gap: 15px;                /* ✅ adds even spacing between tabs */
-  }
-}
-/* ✅ Center Mailing Address + Email on Contact Page */
-.contact-info {
-  text-align: center;     /* Center all text */
-  display: flex;
-  flex-direction: column;
-  align-items: center;    /* Force child elements to center */
-  justify-content: center;
-}
-
-.contact-info p,
-.contact-info strong,
-.contact-info a {
-  margin: 5px 0;
-  text-align: center;     /* Make sure each line centers */
-  display: block;
-}
-/* ✅ Trust Registry Mobile Fix */
-@media screen and (max-width: 768px) {
-  .trust-registry {
-    display: block;
-    width: 100%;
-  }
-
-  .trust-registry tr {
-    display: block;
-    background: rgba(255,255,255,0.05);
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-  }
-
-  .trust-registry th {
-    display: none; /* Hide header row on mobile */
-  }
-
-  .trust-registry td {
-    display: block;
-    text-align: left;
-    padding: 4px 0;
-    border: none;
-  }
-
-  .trust-registry td::before {
-    content: attr(data-label); /* Show the label (Trust Name, Date Formed, Purpose) */
-    font-weight: bold;
-    display: block;
-    margin-bottom: 2px;
-    color: #fffbeb;
-  }
-}
-/* Fix: Perfect centering for Contact info on desktop */
-.gradient-box .contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;   /* centers horizontally */
-  justify-content: center;
   text-align: center;
-  margin: 0 auto;
-}
-
-.gradient-box .contact-info p {
-  margin: 6px 0;
-}
-.contact-info p {
-  margin: 8px 0;   /* reduces big gaps between blocks */
-}
-
-.contact-info .intro {
-  margin-bottom: 15px; /* keeps intro slightly separate */
-}
-/* Uniform Footer Styling */
-footer {
-  font-size: 13px;                /* consistent, subtle size */
-  color: #555;                    /* softer gray instead of harsh black */
-  text-align: center;             /* always centered */
-  margin-top: auto;               /* pushes footer down */
-  padding: 15px 10px;             /* even spacing */
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;              /* ensure full height so footer stays at bottom */
-}
-/* ✅ Uniform footer across all pages */
-footer {
-  text-align: center;
-  font-size: 14px;
-  color: #000;
-  margin-top: 50px;
+  margin-top: auto;
   padding: 15px 0;
-}
-
-/* Keep footer pushed down when page has little content */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-main {
-  flex: 1;
+  width: 100%;
+  position: relative;
 }
