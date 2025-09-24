@@ -357,3 +357,10 @@ footer {
 .gradient-box .contact-info p {
   margin: 6px 0;
 }
+.contact-info p {
+  margin: 8px 0;   /* reduces big gaps between blocks */
+}
+
+.contact-info .intro {
+  margin-bottom: 15px; /* keeps intro slightly separate */
+}
