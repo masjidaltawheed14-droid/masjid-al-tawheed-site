@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<div class="menu-toggle">&#9776;</div>
   <nav>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
@@ -53,6 +53,13 @@
 <footer>
   © 2025 Masjid Al-Tawheed. All Rights Reserved.
 </footer>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
 </body>
 </html>

@@ -335,3 +335,50 @@ h1,
     font-size: 1.3em;   /* smaller so it stays one line */
   }
 }
+/* ===========================
+   Mobile Hamburger Menu
+=========================== */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #1e40af;  /* same blue as links */
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Hide nav by default on small screens */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* show ☰ */
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1a1a1a; /* solid black background */
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .nav-links li {
+    margin: 12px 0;
+    text-align: center;
+  }
+
+  .nav-links a {
+    color: #1e40af;
+    font-size: 18px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
