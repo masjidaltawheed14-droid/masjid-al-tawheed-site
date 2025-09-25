@@ -304,6 +304,7 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
 /* ✅ Ensure footer notes on Public Notices are centered */
 .footer-note {
   text-align: center !important;  
@@ -311,13 +312,21 @@ footer {
   margin: 15px auto;
   width: 100%;
 }
-/* ✅ Homepage Welcome Heading – single clean version */
+
+/* ===========================
+   Unified Headings
+=========================== */
+h1,
 .site-title {
-  font-size: clamp(1.8em, 5vw, 2.2em); /* scales up a bit larger than before */
+  font-size: clamp(1.8em, 5vw, 2.2em); /* consistent across pages */
   text-align: center;
   margin: 20px 0 10px;
   color: #111;
-  white-space: nowrap;   /* keeps it from splitting into 2 lines */
+  line-height: 1.2;
+}
+
+/* ✅ Homepage specific rule: prevent wrapping */
+.site-title {
+  white-space: nowrap;
   display: block;
-  line-height: 1.2;      /* keeps it tidy */
 }
