@@ -9,7 +9,6 @@ html, body {
   color: #000;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;   /* ✅ keeps footer at bottom */
 }
 
 /* ===========================
@@ -25,7 +24,7 @@ nav {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-around;  /* ✅ evenly space all tabs */
+  justify-content: space-around;  /* evenly spaced tabs */
   flex-wrap: wrap;
 }
 
@@ -58,7 +57,7 @@ nav {
 }
 
 /* ===========================
-   Black top stripe (fixed gap)
+   Black top stripe
 =========================== */
 body::before {
   content: "";
@@ -66,13 +65,16 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 35px;              /* taller to remove gaps */
+  height: 35px; /* taller to remove gaps */
   background-color: #1a1a1a;
   z-index: 999;
 }
 
 body {
-  padding-top: 35px;         /* match stripe height */
+  padding-top: 35px; /* match stripe height */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* footer stays down */
 }
 
 /* ===========================
@@ -89,7 +91,7 @@ body {
 }
 
 .logo-container img.logo {
-  max-height: 140px;
+  max-height: 140px; /* desktop size */
   width: auto;
 }
 
@@ -97,7 +99,7 @@ body {
   font-size: 2em;
   margin: 0;
   text-align: center;
-  white-space: normal;   /* ✅ allow wrapping */
+  white-space: normal; /* allow wrapping if needed */
   line-height: 1.3;
 }
 
@@ -106,7 +108,10 @@ body {
     max-height: 90px;
   }
   .logo-container h1 {
-    font-size: 1.4em;
+    font-size: 1.2em;  /* ✅ shrink heading on mobile */
+    white-space: normal;
+    line-height: 1.3;
+    text-align: center;
   }
 }
 
@@ -203,7 +208,7 @@ h1 {
 }
 
 .gradient-box .contact-info p {
-  margin: 0 0 14px;
+  margin: 6px 0;
 }
 
 .gradient-box a {
@@ -261,7 +266,7 @@ h1 {
   border-bottom: none;
 }
 
-/* Stack table on small screens */
+/* Mobile registry stack */
 @media screen and (max-width: 768px) {
   .trust-registry th,
   .trust-registry td {
@@ -274,6 +279,16 @@ h1 {
     border-bottom: 1px solid rgba(255,255,255,0.3);
     display: block;
   }
+  .trust-registry th {
+    display: none;
+  }
+  .trust-registry td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 2px;
+    color: #fffbeb;
+  }
 }
 
 /* ===========================
@@ -281,10 +296,11 @@ h1 {
 =========================== */
 footer {
   font-size: 14px;
-  color: #555;
+  color: #000;
   text-align: center;
   margin-top: auto;
   padding: 15px 0;
-  width: 100%;
   position: relative;
+  bottom: 0;
+  width: 100%;
 }
