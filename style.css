@@ -304,3 +304,10 @@ footer {
   bottom: 0;
   width: 100%;
 }
+/* ✅ Ensure footer notes on Public Notices are centered */
+.footer-note {
+  text-align: center !important;  
+  display: block;
+  margin: 15px auto;
+  width: 100%;
+}
