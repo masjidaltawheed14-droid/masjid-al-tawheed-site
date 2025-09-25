@@ -319,3 +319,26 @@ footer {
   margin: 15px auto;
   line-height: 1.2;
 }
+/* ✅ Homepage title stays one line, fluid font sizing */
+.site-title {
+  white-space: nowrap;           
+  text-align: center;            
+  font-size: clamp(1em, 4vw, 2em); 
+  margin: 15px auto;
+  line-height: 1.2;
+}
+/* ✅ Fine-tuned homepage title size */
+.site-title {
+  font-size: 2.2em;   /* slightly bigger than before */
+  text-align: center;
+  white-space: nowrap;  /* keeps it on one line */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Mobile adjustment: shrink slightly to prevent wrapping */
+@media screen and (max-width: 640px) {
+  .site-title {
+    font-size: 1.7em;   /* safe size for small screens */
+  }
+}
