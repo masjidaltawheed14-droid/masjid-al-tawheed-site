@@ -330,3 +330,8 @@ h1,
   white-space: nowrap;
   display: block;
 }
+@media screen and (max-width: 640px) {
+  .site-title {
+    font-size: 1.3em;   /* smaller so it stays one line */
+  }
+}
