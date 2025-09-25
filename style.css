@@ -382,3 +382,12 @@ h1,
     display: flex;
   }
 }
+.quran-verse {
+  text-align: center;
+  font-style: italic;
+  color: #1e40af;   /* same deep blue as your links */
+  font-size: 1em;
+  margin: 10px auto 15px auto;
+  max-width: 90%;   /* keeps it from stretching too wide on desktop */
+  line-height: 1.5;
+}
