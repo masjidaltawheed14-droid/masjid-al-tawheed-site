@@ -311,29 +311,13 @@ footer {
   margin: 15px auto;
   width: 100%;
 }
-/* ✅ Homepage title stays one line, fluid font sizing */
+/* ✅ Homepage Welcome Heading – single clean version */
 .site-title {
-  white-space: nowrap;           
-  text-align: center;            
-  font-size: clamp(1em, 4vw, 2em); 
-  margin: 15px auto;
-  line-height: 1.2;
-}
-/* ✅ Homepage title stays one line, fluid font sizing */
-.site-title {
-  white-space: nowrap;           
-  text-align: center;            
-  font-size: clamp(1em, 4vw, 2em); 
-  margin: 15px auto;
-  line-height: 1.2;
-}
-/* ✅ Homepage Welcome Heading Uniform Fix */
-.site-title {
-  font-size: clamp(1.8em, 4vw, 2em); /* same as other h1 on desktop, a touch smaller on mobile */
+  font-size: clamp(1.8em, 5vw, 2.2em); /* scales up a bit larger than before */
   text-align: center;
   margin: 20px 0 10px;
   color: #111;
-  white-space: nowrap; /* prevents breaking into 2 lines */
+  white-space: nowrap;   /* keeps it from splitting into 2 lines */
   display: block;
-  line-height: 1.2; /* keeps spacing nice */
+  line-height: 1.2;      /* keeps it tidy */
 }
