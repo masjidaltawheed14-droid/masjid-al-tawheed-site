@@ -391,3 +391,7 @@ h1,
   max-width: 90%;   /* keeps it from stretching too wide on desktop */
   line-height: 1.5;
 }
+.center-text {
+  text-align: center;
+  margin: 0 auto 20px auto; /* keeps spacing consistent */
+}
