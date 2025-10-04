@@ -531,3 +531,27 @@ h1 {
 .logo:hover {
   animation-play-state: paused;
 }
+/* Fix mobile menu overlap */
+nav ul.nav-links {
+  position: relative;
+  z-index: 999; /* Ensures menu sits above glowing headings */
+  background: #111; /* dark solid background to match the site */
+}
+
+/* Optional: for cleaner mobile dropdown */
+@media (max-width: 768px) {
+  nav ul.nav-links {
+    position: absolute;
+    top: 60px; /* adjust based on your header height */
+    left: 0;
+    width: 100%;
+    background: #111;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul.nav-links.active {
+    display: flex;
+  }
+}
