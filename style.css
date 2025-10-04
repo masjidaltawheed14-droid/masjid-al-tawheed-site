@@ -496,15 +496,21 @@ h1 {
   animation: verseGlow 4s ease-in-out infinite;
 }
 /* ===========================
-   Logo Gentle Rotation
+   Logo Gentle Side-to-Side Rotation
 =========================== */
-@keyframes slow-rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes sway-rotate {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }
 
 .logo {
-  animation: slow-rotate 40s linear infinite; /* smooth, full rotation every 40 seconds */
+  animation: sway-rotate 6s ease-in-out infinite;
   transform-origin: center center;
   display: inline-block;
+}
+.logo:hover {
+  animation-play-state: paused;
 }
