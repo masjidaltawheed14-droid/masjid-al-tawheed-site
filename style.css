@@ -495,3 +495,16 @@ h1 {
 .quran-verse p {
   animation: verseGlow 4s ease-in-out infinite;
 }
+/* ===========================
+   Logo Gentle Rotation
+=========================== */
+@keyframes slow-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.logo {
+  animation: slow-rotate 40s linear infinite; /* smooth, full rotation every 40 seconds */
+  transform-origin: center center;
+  display: inline-block;
+}
