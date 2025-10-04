@@ -395,3 +395,17 @@ h1,
   text-align: center;
   margin: 0 auto 20px auto; /* keeps spacing consistent */
 }
+/* Keep emoji titles one line on mobile */
+@media screen and (max-width: 640px) {
+  .site-title {
+    white-space: nowrap;          /* stays one line */
+    font-size: clamp(1em, 4.2vw, 1.6em); /* scales slightly smaller on mobile */
+    line-height: 1.2;
+  }
+}
+/* ✨ Gentle gold glow for sparkle emojis */
+.site-title {
+  text-shadow:
+    0 0 4px rgba(250, 204, 21, 0.8),
+    0 0 8px rgba(250, 204, 21, 0.6);
+}
