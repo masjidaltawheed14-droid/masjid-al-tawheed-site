@@ -409,3 +409,89 @@ h1,
     0 0 4px rgba(250, 204, 21, 0.8),
     0 0 8px rgba(250, 204, 21, 0.6);
 }
+/* ===========================
+   Gentle Glow Pulse Animation for Headings
+=========================== */
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 4px rgba(30, 64, 175, 0.5),
+                 0 0 10px rgba(250, 204, 21, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(250, 204, 21, 0.7),
+                 0 0 20px rgba(30, 64, 175, 0.6);
+    transform: scale(1.02);
+  }
+  100% {
+    text-shadow: 0 0 4px rgba(30, 64, 175, 0.5),
+                 0 0 10px rgba(250, 204, 21, 0.3);
+    transform: scale(1);
+  }
+}
+
+/* Apply to all main headings */
+h1 {
+  animation: glowPulse 4s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+/* ===========================
+   Navbar Glow on Hover + Active
+=========================== */
+@keyframes navGlow {
+  0% {
+    text-shadow: 0 0 4px rgba(30, 64, 175, 0.4),
+                 0 0 8px rgba(250, 204, 21, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(250, 204, 21, 0.7),
+                 0 0 16px rgba(30, 64, 175, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 4px rgba(30, 64, 175, 0.4),
+                 0 0 8px rgba(250, 204, 21, 0.3);
+  }
+}
+
+/* Glow animation when hovering or on the active tab */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #1e40af;
+  animation: navGlow 3s ease-in-out infinite;
+}
+/* ===========================
+   Qur'an Verse Gentle Shimmer
+=========================== */
+@keyframes verseShimmer {
+  0% {
+    text-shadow: 0 0 2px rgba(30, 64, 175, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(30, 64, 175, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(30, 64, 175, 0.3);
+  }
+}
+
+.quran-verse p:hover {
+  animation: verseShimmer 3s ease-in-out infinite;
+}
+/* ===========================
+   Qur'an Verse Gentle Continuous Glow
+=========================== */
+@keyframes verseGlow {
+  0% {
+    text-shadow: 0 0 2px rgba(30, 64, 175, 0.25);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(30, 64, 175, 0.45);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(30, 64, 175, 0.25);
+  }
+}
+
+.quran-verse p {
+  animation: verseGlow 4s ease-in-out infinite;
+}
